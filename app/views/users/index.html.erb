@@ -1,10 +1,17 @@
 <% title "All users" %>
 
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <table>
   <tr>
-    <th>username</th>
+	<th>title</th>
+    <th>Name</th>
     <th>Email</th>
-	<th>Password_hash</th>
+	<th>organization</th>
+	<th>homepage</th>
+	<th>photo</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +19,12 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.username %></td>
-    <td><%= user.email %></td>
-	<td><%= user.password_hash %></td>
+    <td><%= user.title %></td>
+    <td><%= user.name %></td>
+	<td><%= user.email %></td>
+	<td><%= user.organization %></td>
+	<td><%= user.homepage %></td>
+	<td><%= user.photo %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
