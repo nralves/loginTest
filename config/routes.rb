@@ -1,5 +1,7 @@
 Nifty::Application.routes.draw do
 
+  root :to => 'users#test'
+
   match 'user/edit' => 'users#edit', :as => :edit_current_user
 
   match 'signup' => 'users#new', :as => :signup
@@ -9,12 +11,16 @@ Nifty::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
 
   match 'login' => 'sessions#new', :as => :login
+  
+  match 'newscheck' => 'news#checkDate', :as => :newscheck
+  
+  match 'getnews' => 'news#getnews', :as => :getnews
 
   resources :sessions
 
   resources :users
   
-  root :to => 'users#test'
+  resources :news
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

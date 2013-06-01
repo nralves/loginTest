@@ -1,0 +1,18 @@
+<h1>DATE</h1>
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+  </tr>
+
+<% @news.each do |news| %>
+  <tr>
+    <td><%= news.title %></td>
+    <td><%= news.updated_at %></td>
+  </tr>
+<% end %>
+</table>
