@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   # login can be either username or email address
   def self.authenticate(login, pass)
-    user = find_by_username(login) || find_by_email(login)
+    user = find_by_email(login)
     return user if user && user.password_hash == user.encrypt_password(pass)
   end
 
