@@ -6,15 +6,23 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:login], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Logged in successfully."
+		respond_to do |format|
+			format.html {redirect_to root_url, :notice => "Logged in successfully."}
+			format.json { render :text => "{Logged in successfully.}", :status => 200 }
+		end
     else
-      flash.now[:alert] = "Invalid login or password."
-      render :action => 'new'
+		respond_to do |format|
+			format.html {render :action => 'new'}
+			format.json { render :text => "{Wrong login.}", :status => 406 }
+		end
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, :notice => "You have been logged out."
+	respond_to do |format|
+			format.html {redirect_to root_url, :notice => "You have been logged out."}
+			format.json { render :text => "{You have been logged out.}", :status => 200 }
+		end
   end
 end

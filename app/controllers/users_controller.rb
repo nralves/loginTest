@@ -2,10 +2,17 @@ class UsersController < ApplicationController
   before_filter :login_required, :except => [:new, :create, :test]
 
   def test
+	if logged_in?
 		respond_to do |format|
 			format.html {render :action => 'test' }
 			format.json { render :text => "{Accepted}", :status => 200 }
 		end
+	else
+		respond_to do |format|
+			format.html {render :action => 'test' }
+			format.json { render :text => "{Please login}", :status => 200 }
+		end
+	end
   end
   
   def new
@@ -17,13 +24,13 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
 	  respond_to do |format|
-			format.html {redirect_to root_url, :notice => "Thank you for signing up! You are now logged in."}
+			format.html {redirect_to users_url, :notice => "Thank you for signing up! You are now logged in."}
 			format.json { head :ok }
 		end
     else
 		respond_to do |format|
 			format.html {render :action => 'new'}
-			format.json { head :not_acceptable }
+			format.json { render :text => "{Rejected}", :status => 406 }
 		end
     end
   end
@@ -67,7 +74,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.html.erb nao é suposto dar
       format.json { render json: @user }
     end
   end
