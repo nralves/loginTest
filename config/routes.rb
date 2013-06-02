@@ -1,5 +1,11 @@
 Nifty::Application.routes.draw do
 
+  resources :events
+
+
+  resources :lecturers
+
+
   root :to => 'users#test'
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
