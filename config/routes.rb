@@ -1,11 +1,5 @@
 Nifty::Application.routes.draw do
 
-  resources :events
-
-
-  resources :lecturers
-
-
   root :to => 'users#test'
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
@@ -21,12 +15,20 @@ Nifty::Application.routes.draw do
   match 'newscheck' => 'news#checkDate', :as => :newscheck
   
   match 'getnews' => 'news#getnews', :as => :getnews
+  
+  match 'conferencedownload' => 'conferences#conferencedownload', :as => :conferencedownload
+
+  resources :users 
 
   resources :sessions
-
-  resources :users
+  
+  resources :conferences
   
   resources :news
+
+  resources :events
+
+  resources :lecturers
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

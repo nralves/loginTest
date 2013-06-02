@@ -31,6 +31,8 @@
     <%= f.submit %>
   </div>
   
+  <%= collection_select(:event, :conference_id, @conferences, :id, :name, {:prompt => false })  %>
+  
   <% @lecturers.each do |lecturer| %>
 	<div>
 		<%= check_box_tag "event[lecturer_ids][]", lecturer.id, @event.lecturers.include?(lecturer) %>

@@ -1,13 +1,13 @@
 <h1>Listing events</h1>
 
-<table>
+<table border="1">
   <tr>
     <th>Name</th>
     <th>Room</th>
     <th>Begin</th>
     <th>End</th>
-    <th></th>
-    <th></th>
+    <th>Lecturers</th>
+    <th>Conference</th>
     <th></th>
   </tr>
 
@@ -17,6 +17,22 @@
     <td><%= event.room %></td>
     <td><%= event.begin %></td>
     <td><%= event.end %></td>
+	
+	<td>
+		<% event.lecturers.each do |lecturer| %>
+			<div>
+				<%= lecturer.name %><br>
+			</div>
+		<% end %>
+	</td>
+	
+	<td>
+			<div>
+				<%= event.conference.name %><br>
+			</div>
+	
+	</td>
+	
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
