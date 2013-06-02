@@ -17,6 +17,8 @@ Nifty::Application.routes.draw do
   match 'getnews' => 'news#getnews', :as => :getnews
   
   match 'conferencedownload' => 'conferences#conferencedownload', :as => :conferencedownload
+  
+  match 'getallconferences' => 'conferences#getallconferences', :as => :getallconferences
 
   resources :users 
 

@@ -86,8 +86,25 @@ class ConferencesController < ApplicationController
 
 		 respond_to do |format|
 		  format.html { redirect_to conferences_url }
-		  format.json { render :json => @conference.to_json(:include => { :events => {:include => :lecturers}})}
-					  #{ render :json => {:conference => @conference, :events => @conference.events}}
+		  format.json { render :json => @conference.to_json(:include => { :events => {:include => {:lecturers => {:only => :name}}, :only => :name }}, :only => :name)}
+					  
 		 end
   end
+  
+  
+  def getallconferences
+	@conferences = Conference.all
+	
+	
+		
+		respond_to do |format|
+		  format.html { redirect_to conferences_url }
+		  format.json { render :json => @conferences.to_json(:only => [:name, :location, :begin, :end]) }
+		 end
+  
+  end
+  
+  
+  
+  
 end
