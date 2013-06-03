@@ -86,7 +86,8 @@ class ConferencesController < ApplicationController
 
 		 respond_to do |format|
 		  format.html { redirect_to conferences_url }
-		  format.json { render :json => @conference.to_json(:include => { :events => {:include => {:lecturers => {:only => :name}}, :only => :name }}, :only => :name)}
+		  format.json 
+			#{ render :json => @conference.to_json(:include => { :events => {:include => {:lecturers => {:only => :name}}, :only => :name }}, :only => :name)}
 					  
 		 end
   end
@@ -99,7 +100,9 @@ class ConferencesController < ApplicationController
 		
 		respond_to do |format|
 		  format.html { redirect_to conferences_url }
-		  format.json { render :json => @conferences.to_json(:only => [:name, :location, :begin, :end]) }
+		  format.json
+		  
+		  #{ render :json => @conferences.to_json(:only => [:name, :location, :begin, :end]) }
 		 end
   
   end

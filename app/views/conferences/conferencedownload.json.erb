@@ -1,0 +1,35 @@
+{
+		"conference":
+					{
+						"id": "<%= @conference.id %>",
+						"name": "<%= @conference.name %>",
+						"location": "<%= @conference.location %>",
+						"begin": "<%= @conference.begin %>",
+						"end": "<%= @conference.end %>",
+						"events": {
+							"event": [
+								<% @conference.events.each do |event| %>
+								{
+									"name": "<%= event.name %>",
+									"room": "<%= event.room %>",
+									"begin": "<%= event.begin %>",
+									"end": "<%= event.end %>",
+									
+									"lecturers": {
+											"lecturer": [
+												<% @conference.events.each do |event| %>
+												<% event.lecturers.each do |lecturer| %>
+												{
+													"name": "<%= lecturer.name %>",
+												},
+													<% end %>
+													<% end %>
+													 ]
+											}
+								},
+									<% end %>
+									 ]
+								  }
+					},
+					
+} 
