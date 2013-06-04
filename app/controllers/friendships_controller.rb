@@ -2,13 +2,13 @@ class FriendshipsController < ApplicationController
 	  def create
 	  @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
 	  @reverse_friendship = @friendship.friend.friendships.build(:friend_id => current_user.id)
-	  
-
 	  @test_friendship = current_user.friendships.where("friend_id = \"#{params[:friend_id]}\"").first
 	  
 	if current_user.id != @friendship.friend.id	&& @test_friendship.nil?
 		  if @friendship.save && @reverse_friendship.save
 			flash[:notice] = "Added friend."
+			request = current_user.requests.where("requester_id = \"#{params[:friend_id]}\"").first
+			request.destroy
 			redirect_to root_url
 		  else
 			flash[:error] = "Unable to add friend."

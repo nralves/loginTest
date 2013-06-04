@@ -42,9 +42,16 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes(params[:user])
-      redirect_to root_url, :notice => "Your profile has been updated."
+	  respond_to do |format|
+        format.html { redirect_to root_url, :notice => "Your profile has been updated."}
+        format.json {render :text => "{Updated}", :status => 200 }
+	  end
     else
-      render :action => 'edit'
+      
+	  respond_to do |format|
+        format.html {render :action => 'edit'}
+        format.json {render :text => "{Not updated}", :status => 406 }
+	  end
     end
   end
   
@@ -74,8 +81,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb nao é suposto dar
-      format.json { render json: @user }
+      format.html # show.html.erb
+      format.json
     end
   end
 end

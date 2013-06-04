@@ -1,5 +1,8 @@
 Nifty::Application.routes.draw do
 
+  resources :requests
+
+
   resources :friendships
 
   root :to => 'users#test'

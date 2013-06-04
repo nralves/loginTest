@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
 		respond_to do |format|
 			format.html {redirect_to root_url, :notice => "Logged in successfully."}
-			format.json { render :text => "{Logged in successfully.}", :status => 200 }
+			format.json { render :text => "#{user.id}", :status => 200 }
 		end
     else
 		respond_to do |format|
