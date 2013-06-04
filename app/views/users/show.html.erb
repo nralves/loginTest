@@ -1,0 +1,43 @@
+<h1>Profile</h1>
+
+<table>
+  <tr>
+	<th>title</th>
+    <th>Name</th>
+    <th>Email</th>
+	<th>organization</th>
+	<th>homepage</th>
+	<th>photo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><%= @user.title %></td>
+    <td><%= @user.name %></td>
+	<td><%= @user.email %></td>
+	<td><%= @user.organization %></td>
+	<td><%= @user.homepage %></td>
+	<td><%= @user.photo %></td>
+</tr>
+</table>
+
+<h2>Friends</h2>
+<ul>
+  <% for friendship in @user.friendships %>
+    <li>
+      <%=h friendship.friend.name %>
+      (<%= link_to "remove", friendship, :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Find Friends", users_path %></p>
+
+<h2>Friended by Users</h2>
+<ul>
+  <% for user in @user.inverse_friends %>
+    <li><%=h user.name %></li>
+  <% end %>
+</ul>
+

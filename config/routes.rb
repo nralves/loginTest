@@ -1,5 +1,7 @@
 Nifty::Application.routes.draw do
 
+  resources :friendships
+
   root :to => 'users#test'
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user

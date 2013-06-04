@@ -3,10 +3,15 @@
     <div id="notice"><%= flash[:notice] %></div>
 <% end %>
 
+<% if flash[:error] %>
+    <div id="Error"><%= flash[:error] %></div>
+<% end %>
+
  <% if logged_in? %>
      Welcome <%= current_user.email %>.
      <%= link_to "Edit profile", edit_current_user_path %> or
-     <%= link_to "Log out", logout_path %>
+     <%= link_to "Log out", logout_path %> or
+	 <p><%= link_to "Users", users_path %></p>
    <% else %>
      <%= link_to "Sign up", signup_path %> or
      <%= link_to "log in", login_path %>.
