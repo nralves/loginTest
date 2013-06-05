@@ -5,7 +5,7 @@
     <th>Title</th>
     <th>Body</th>
     <th>Time</th>
-    <th></th>
+    <th>Conf ID</th>
     <th></th>
   </tr>
 
@@ -14,6 +14,7 @@
     <td><%= news.title %></td>
     <td><%= news.body %></td>
 	<td><%= news.updated_at %></td>
+	<td><%= news.conference_id %></td>
     <td><%= link_to 'Show', news %></td>
     <td><%= link_to 'Edit', edit_news_path(news) %></td>
     <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,0 +1,11 @@
+{
+"news": [
+					<% @news.each do |news| %>
+					{
+						"title": "<%= news.title %>",
+						"body": "<%= news.body %>",
+						"updated": "<%= news.updated_at %>"
+					},
+					<% end %>
+			]
+}

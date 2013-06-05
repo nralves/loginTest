@@ -25,6 +25,7 @@ class NewsController < ApplicationController
   # GET /news/new.json
   def new
     @news = News.new
+	@conferences = Conference.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class NewsController < ApplicationController
   # POST /news.json
   def create
     @news = News.new(params[:news])
+	@conferences = Conference.all
 
     respond_to do |format|
       if @news.save
@@ -94,11 +96,12 @@ class NewsController < ApplicationController
   def getnews
 	if request.post?
 		date = params[:date]
-		@news = News.where("updated_at >= \"#{date}\"")
+		id = params[:id]
+		@news = News.where("updated_at >= \"#{date}\" and conference_id = \"#{id}\"")
 
 		respond_to do |format|
 		  format.html {redirect_to news_index_url}
-		  format.json { render json:  @news.to_json(:only => ["title","body","updated_at"])}
+		  format.json #{ render json:  @news.to_json(:only => ["title","body","updated_at", "conference_id"])}
 		end
 	else
 		respond_to do |format|

@@ -22,4 +22,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  
+  <%= collection_select(:news, :conference_id, @conferences, :id, :name, {:prompt => false })  %>
+  
 <% end %>
