@@ -85,4 +85,13 @@ class UsersController < ApplicationController
       format.json
     end
   end
+  
+  def getprofile
+    @user = current_user
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json
+    end
+  end
 end

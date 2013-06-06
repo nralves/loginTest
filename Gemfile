@@ -11,6 +11,10 @@ gem "nifty-generators", :group => :development
 
 gem "bcrypt-ruby", :require => "bcrypt"
 
+gem 'carrierwave'
+
+gem 'mini_magick'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

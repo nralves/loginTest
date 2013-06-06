@@ -24,6 +24,8 @@ Nifty::Application.routes.draw do
   match 'conferencedownload' => 'conferences#conferencedownload', :as => :conferencedownload
   
   match 'getallconferences' => 'conferences#getallconferences', :as => :getallconferences
+  
+  match 'getprofile' => 'users#getprofile', :as =>:getprofile
 
   resources :users 
 

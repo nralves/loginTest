@@ -22,7 +22,7 @@
     <td><%= lecturer.country %></td>
     <td><%= lecturer.homepage %></td>
     <td><%= lecturer.resume %></td>
-    <td><%= lecturer.photo %></td>
+    <td><%= image_tag lecturer.image_url(:thumb).to_s %>  </td>
     <td><%= link_to 'Show', lecturer %></td>
     <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
     <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
