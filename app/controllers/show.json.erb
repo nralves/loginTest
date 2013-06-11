@@ -1,0 +1,15 @@
+{
+"lecturers": {
+		"lecturer": [
+					<% @lecturers.each do |conference| %>
+					{
+						"id": "<%= conference.id %>",
+						"name": "<%= conference.name %>",
+						"location": "<%= conference.location %>",
+						"begin": "<%= conference.begin %>",
+						"end": "<%= conference.end %>"
+					},
+					<% end %>
+					]
+			}
+}

@@ -17,12 +17,10 @@
 									
 									"lecturers": {
 											"lecturer": [
-												<% @conference.events.each do |event| %>
 												<% event.lecturers.each do |lecturer| %>
 												{
 													"name": "<%= lecturer.name %>",
 												},
-													<% end %>
 													<% end %>
 													 ]
 											}

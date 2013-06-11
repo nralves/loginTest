@@ -36,6 +36,7 @@ class NewsController < ApplicationController
   # GET /news/1/edit
   def edit
     @news = News.find(params[:id])
+	@conferences = Conference.all
   end
 
   # POST /news
@@ -59,6 +60,7 @@ class NewsController < ApplicationController
   # PUT /news/1.json
   def update
     @news = News.find(params[:id])
+	@conferences = Conference.all
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
@@ -83,15 +85,7 @@ class NewsController < ApplicationController
     end
   end
   
-  #Nao esta a ser utilizado, pois ja nao e necessario
-  def checkDate
-	@news = News.find(:all, :order => 'updated_at DESC', :limit => 1)
-	
-	respond_to do |format|
-      format.html { render action: "date", notice: 'Date'}
-      format.json { render json: @news.to_json(:only => ["updated_at"]), status: :ok }
-    end
-  end
+
   
   def getnews
 	if request.post?

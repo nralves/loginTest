@@ -1,0 +1,16 @@
+{
+"lecturers": {
+		"lecturer": [
+					<% @lecturers.each do |lecturer| %>
+					{
+						"title": "<%= lecturer.title %>",
+						"name": "<%= lecturer.name %>",
+						"organization": "<%= lecturer.organization %>",
+						"country": "<%= lecturer.country %>",
+						"homepage": "<%= lecturer.homepage %>",
+						"resume": "<%= lecturer.resume %>"
+					},
+					<% end %>
+					]
+			}
+}
