@@ -16,22 +16,15 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :room %><br />
-    <%= f.text_field :room %>
+    <%= f.label :abstract %><br />
+    <%= f.text_field :abstract %>
   </div>
-  <div class="field">
-    <%= f.label :begin %><br />
-    <%= f.datetime_select :begin %>
-  </div>
-  <div class="field">
-    <%= f.label :end %><br />
-    <%= f.datetime_select :end %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
   
-  <%= collection_select(:event, :conference_id, @conferences, :id, :name, {:prompt => false })  %>
+  <%= collection_select(:event, :block_id, @blocks, :id, :name, {:prompt => false })  %>
   
   <% @lecturers.each do |lecturer| %>
 	<div>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @block.name %>
+</p>
+
+<p>
+  <b>Begin:</b>
+  <%= @block.begin %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @block.end %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @block.room %>
+</p>
+
+<p>
+  <b>Conference:</b>
+  <%= @block.conference_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_block_path(@block) %> |
+<%= link_to 'Back', blocks_path %>

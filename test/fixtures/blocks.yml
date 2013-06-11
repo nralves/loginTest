@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  begin: 2013-06-11 18:27:02
+  end: 2013-06-11 18:27:02
+  room: MyString
+  conference_id: 1
+
+two:
+  name: MyString
+  begin: 2013-06-11 18:27:02
+  end: 2013-06-11 18:27:02
+  room: MyString
+  conference_id: 1

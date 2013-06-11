@@ -4,20 +4,15 @@
   <tr>
     <th>Name</th>
     <th>Room</th>
-    <th>Begin</th>
-    <th>End</th>
     <th>Lecturers</th>
-    <th>Conference</th>
+    <th>Block</th>
     <th></th>
   </tr>
 
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <td><%= event.room %></td>
-    <td><%= event.begin %></td>
-    <td><%= event.end %></td>
-	
+    <td><%= event.abstract %></td>
 	<td>
 		<% event.lecturers.each do |lecturer| %>
 			<div>
@@ -25,10 +20,9 @@
 			</div>
 		<% end %>
 	</td>
-	
 	<td>
 			<div>
-				<%= event.conference.name %><br>
+				<%= event.block.name %><br>
 			</div>
 	
 	</td>

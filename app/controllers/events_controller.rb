@@ -26,7 +26,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
 	@lecturers = Lecturer.all
-	@conferences = Conference.all
+	@blocks = Block.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
 	@lecturers = Lecturer.all
-	@conferences = Conference.all
+	@blocks = Block.all
   end
 
   # POST /events

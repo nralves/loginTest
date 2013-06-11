@@ -1,0 +1,36 @@
+<%= form_for(@block) do |f| %>
+  <% if @block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@block.errors.count, "error") %> prohibited this block from being saved:</h2>
+
+      <ul>
+      <% @block.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :begin %><br />
+    <%= f.datetime_select :begin %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br />
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br />
+    <%= f.text_field :room %>
+  </div>
+  
+   <%= collection_select(:block, :conference_id, @conferences, :id, :name, {:prompt => false })  %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

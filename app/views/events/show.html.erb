@@ -6,18 +6,13 @@
 </p>
 
 <p>
-  <b>Room:</b>
-  <%= @event.room %>
+  <b>Abstract:</b>
+  <%= @event.abstract %>
 </p>
 
 <p>
-  <b>Begin:</b>
-  <%= @event.begin %>
-</p>
-
-<p>
-  <b>End:</b>
-  <%= @event.end %>
+  <b>Block:</b>
+  <%= @event.block.name %>
 </p>
 
   <% @event.lecturers.each do |lecturer| %>
