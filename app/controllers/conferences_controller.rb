@@ -83,7 +83,7 @@ class ConferencesController < ApplicationController
   
   def conferencedownload
   @conference = Conference.find(params[:id])
-
+  @lecturersArray = Array.new
 		 respond_to do |format|
 		  format.html { redirect_to conferences_url }
 		  format.json 

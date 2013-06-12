@@ -6,28 +6,81 @@
 						"location": "<%= @conference.location %>",
 						"begin": "<%= @conference.begin %>",
 						"end": "<%= @conference.end %>",
-						"events": {
-							"event": [
-								<% @conference.events.each do |event| %>
-								{
-									"name": "<%= event.name %>",
-									"room": "<%= event.room %>",
-									"begin": "<%= event.begin %>",
-									"end": "<%= event.end %>",
-									
-									"lecturers": {
-											"lecturer": [
-												<% event.lecturers.each do |lecturer| %>
+						
+						"blocks":
+							{
+								"block": [
+								
+								<% @conference.blocks.each do |block| %>
+													{
+														"name": "<%= block.name %>",
+														"room": "<%= block.room %>",
+														"begin": "<%= block.begin %>",
+														"end": "<%= block.end %>",
+													
+							
+														"events": {
+																"event": [
+																	<% block.events.each do |event| %>
+																	{
+																		"name": "<%= event.name %>",
+																		"abstract": "<%= event.abstract %>",
+																		
+																				"lecturers": {
+																						"lecturer": [
+																							<% event.lecturers.each do |lecturer| %>
+																							{
+																								"id": "<%= lecturer.id %>"	
+																								<% @lecturersArray << lecturer%>
+																							},
+																								<% end %>
+																						]
+																				}	
+																		
+																	},
+																		<% end %>
+																]
+														}
+													
+													},
+		
+								<% end %>
+								]
+							},
+						
+						"news":  [
+										<% @conference.news.each do |news| %>
 												{
-													"name": "<%= lecturer.name %>",
+												"title": "<%= news.title %>",
+												"body": "<%= news.body %>",
+												"updated at": "<%= news.updated_at %>"
 												},
-													<% end %>
-													 ]
-											}
-								},
-									<% end %>
-									 ]
-								  }
-					},
+												<% end %>
+									],
+								
+					
+							
+						
+						"Lecturers":  [
+										<% @lecturersArray.each do |lecturer| %>
+												{
+													"id": "<%= lecturer.id %>",
+													"title": "<%= lecturer.title %>",
+													"name": "<%= lecturer.name %>",
+													"organization": "<%= lecturer.organization %>",
+													"country": "<%= lecturer.country %>",
+													"homepage": "<%= lecturer.homepage %>",
+													"resume": "<%= lecturer.resume %>"
+												},
+												<% end %>
+									],	
+							
+							
+							
+							
+							
+							
+							
+					}
 					
 } 

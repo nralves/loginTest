@@ -3,6 +3,7 @@
 		"lecturer": [
 					<% @lecturers.each do |lecturer| %>
 					{
+						"id": "<%= lecturer.id %>"
 						"title": "<%= lecturer.title %>",
 						"name": "<%= lecturer.name %>",
 						"organization": "<%= lecturer.organization %>",
