@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :begin %><br />
-    <%= f.datetime_select :begin %>
+    <%= f.datetime_select :begin, :order => [:day, :month, :year], :discard_hour => true %>
   </div>
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.datetime_select :end %>
+    <%= f.datetime_select :end, :order => [:day, :month, :year], :discard_hour => true %>
   </div>
   <div class="field">
     <%= f.label :location %><br />

@@ -1,12 +1,16 @@
 <h1>Listing events</h1>
 
-<table border="1">
+<%= link_to 'New Event', new_event_path %><br />
+<%= link_to 'Conferences', conferences_path %>
+<%= link_to 'Blocks', blocks_path %>
+<%= link_to 'Lecturers', lecturers_path %>
+
+<table>
   <tr>
     <th>Name</th>
-    <th>Room</th>
+    <th>Abstract</th>
     <th>Lecturers</th>
     <th>Block</th>
-    <th></th>
   </tr>
 
 <% @events.each do |event| %>
@@ -35,5 +39,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Event', new_event_path %>

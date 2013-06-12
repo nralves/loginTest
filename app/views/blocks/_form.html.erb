@@ -17,18 +17,18 @@
   </div>
   <div class="field">
     <%= f.label :begin %><br />
-    <%= f.datetime_select :begin %>
+    <%= f.datetime_select :begin, :order => [:day, :month, :year] %>
   </div>
   <div class="field">
     <%= f.label :end %><br />
-    <%= f.datetime_select :end %>
+    <%= f.datetime_select :end, :order => [:day, :month, :year] %>
   </div>
   <div class="field">
     <%= f.label :room %><br />
     <%= f.text_field :room %>
   </div>
   
-   <%= collection_select(:block, :conference_id, @conferences, :id, :name, {:prompt => false })  %>
+   <%= collection_select(:block, :conference_id, @conferences, :id, :name_and_date, {:prompt => false })  %>
   
   <div class="actions">
     <%= f.submit %>

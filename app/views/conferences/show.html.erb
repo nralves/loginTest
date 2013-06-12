@@ -7,12 +7,12 @@
 
 <p>
   <b>Begin:</b>
-  <%= @conference.begin %>
+  <%= @conference.begin.strftime("%d - %B %Y") %>
 </p>
 
 <p>
   <b>End:</b>
-  <%= @conference.end %>
+  <%= @conference.end.strftime("%d - %B %Y") %>
 </p>
 
 <p>

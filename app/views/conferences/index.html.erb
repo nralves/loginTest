@@ -1,5 +1,11 @@
 <h1>Listing conferences</h1>
 
+
+<%= link_to 'New Conference', new_conference_path %><br />
+<%= link_to 'Blocks', blocks_path %>
+<%= link_to 'Events', events_path %>
+<%= link_to 'Lecturers', lecturers_path %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -7,16 +13,13 @@
     <th>End</th>
     <th>Location</th>
     <th>Logo</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @conferences.each do |conference| %>
   <tr>
     <td><%= conference.name %></td>
-    <td><%= conference.begin %></td>
-    <td><%= conference.end %></td>
+    <td><%= conference.begin.strftime("%d - %B %Y")%></td>
+    <td><%= conference.end.strftime("%d - %B %Y")%></td>
     <td><%= conference.location %></td>
 	<td><%= image_tag conference.logo_url(:thumb).to_s %>  </td>
     <td><%= link_to 'Show', conference %></td>
@@ -27,5 +30,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Conference', new_conference_path %>
