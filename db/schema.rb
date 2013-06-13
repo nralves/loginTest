@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611172702) do
+ActiveRecord::Schema.define(:version => 20130613154105) do
 
   create_table "blocks", :force => true do |t|
     t.string   "name"
@@ -72,6 +72,16 @@ ActiveRecord::Schema.define(:version => 20130611172702) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "conference_id"
+  end
+
+  create_table "posters", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "file"
+    t.integer  "conference_id"
+    t.integer  "votes"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "requests", :force => true do |t|

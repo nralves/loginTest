@@ -1,0 +1,39 @@
+<h1>Listing posters</h1>
+
+<%= link_to 'New Poster', new_poster_path %><br />
+<%= link_to 'Blocks', blocks_path %>
+<%= link_to 'Events', events_path %>
+<%= link_to 'Lecturers', lecturers_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>File</th>
+    <th>Conference</th>
+    <th>Votes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posters.each do |poster| %>
+  <tr>
+    <td><%= poster.name %></td>
+    <td><%= poster.description %></td>
+    <td>
+	<%= link_to 'Download Poster', :action => :download_file, :id => poster.id %><br />
+	<%= poster.file.filename %><br />
+	File type: <%= poster.file.file.extension.downcase %>;<br />
+	File size: <%= poster.file.file.size/1000%> kbs;<br />
+	</td>
+    <td><%= poster.conference.name %></td>
+    <td><%= poster.votes %></td>
+    <td><%= link_to 'Show', poster %></td>
+    <td><%= link_to 'Edit', edit_poster_path(poster) %></td>
+    <td><%= link_to 'Destroy', poster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

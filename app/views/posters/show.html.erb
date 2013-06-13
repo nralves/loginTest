@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @poster.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @poster.description %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @poster.file %>
+</p>
+
+<p>
+  <b>Conference:</b>
+  <%= @poster.conference_id %>
+</p>
+
+<p>
+  <b>Votes:</b>
+  <%= @poster.votes %>
+</p>
+
+
+<%= link_to 'Edit', edit_poster_path(@poster) %> |
+<%= link_to 'Back', posters_path %>

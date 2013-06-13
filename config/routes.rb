@@ -1,4 +1,7 @@
 Nifty::Application.routes.draw do
+  resources :posters
+
+
   resources :blocks
 
 
@@ -27,6 +30,8 @@ Nifty::Application.routes.draw do
   match 'getallconferences' => 'conferences#getallconferences', :as => :getallconferences
   
   match 'getprofile' => 'users#getprofile', :as =>:getprofile
+  
+  match 'download_file' => 'posters#download_file', :as => :download_file
 
   resources :users 
 
