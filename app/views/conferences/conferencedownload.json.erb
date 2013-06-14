@@ -6,6 +6,8 @@
 						"location": "<%= @conference.location %>",
 						"begin": "<%= @conference.begin %>",
 						"end": "<%= @conference.end %>",
+						"end": "<%= @conference.end %>",
+						"logo": "<%= @conference.logo_url(:thumb).to_s %>",
 						
 						"blocks":
 							{
@@ -70,7 +72,8 @@
 													"organization": "<%= lecturer.organization %>",
 													"country": "<%= lecturer.country %>",
 													"homepage": "<%= lecturer.homepage %>",
-													"resume": "<%= lecturer.resume %>"
+													"resume": "<%= lecturer.resume %>",
+													"image": "<%= lecturer.image_url(:thumb).to_s %>"
 												},
 												<% end %>
 									],	
