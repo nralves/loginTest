@@ -1,10 +1,7 @@
 Nifty::Application.routes.draw do
   resources :posters
 
-
   resources :blocks
-
-
   resources :requests
   
   resources :friendships
@@ -31,7 +28,9 @@ Nifty::Application.routes.draw do
   
   match 'getprofile' => 'users#getprofile', :as =>:getprofile
   
-  match 'download_file' => 'posters#download_file', :as => :download_file
+  match 'download_poster' => 'posters#download_poster', :as => :download_poster
+  
+  match 'vote' => 'posters#vote', :as => :vote
 
   resources :users 
 

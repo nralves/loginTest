@@ -74,6 +74,23 @@
 												},
 												<% end %>
 									],	
+									
+					"Posters":  [
+										<% @conference.posters.each do |poster| %>
+												{
+													"id": "<%= poster.id %>",
+													"name": "<%= poster.name %>",
+													"description": "<%= poster.description %>",
+													"votes": "<%= poster.votes %>",
+													<% if poster.file? %>
+														"file_type": "<%= poster.file.file.extension.downcase %>",
+														"size": "<%= poster.file.size %>",
+													<% else %>
+														"file_type": "no_file"
+													<% end %>
+												},
+												<% end %>
+									],
 							
 							
 							

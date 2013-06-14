@@ -28,7 +28,7 @@
   
   <div class="field">
     <%= f.label :votes %><br />
-    <%= f.number_field :votes %>
+    <%= f.number_field :votes, :min=>0, :value =>0 %>
   </div>
   <div class="actions">
     <%= f.submit %>

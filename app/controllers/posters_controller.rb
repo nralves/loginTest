@@ -36,6 +36,7 @@ class PostersController < ApplicationController
   # GET /posters/1/edit
   def edit
     @poster = Poster.find(params[:id])
+	@conferences = Conference.all
   end
 
   # POST /posters
@@ -84,12 +85,33 @@ class PostersController < ApplicationController
     end
   end
   
-  def download_file
+  def download_poster
     @poster = Poster.find(params[:id])
     send_file(@poster.file.path,
           :filename => @poster.file.filename,
           :type => @poster.file.file.extension.downcase,
           :disposition => 'attachment',
           :url_based_filename => false)
+  end
+  
+  def vote
+	poster = Poster.find(params[:id])
+	
+	if !poster.nil?
+		nvotes = poster.votes+1
+		poster.update_attributes(:votes=>nvotes)
+	end
+	
+	
+	respond_to do |format|
+      if !poster.nil?
+        format.html { head :ok }
+        format.json { render json: poster.votes }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @poster.errors, status: :unprocessable_entity }
+      end
+    end
+	
   end
 end
