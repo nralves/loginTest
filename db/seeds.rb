@@ -120,8 +120,8 @@ User.create(
 			
 posters = 
 Poster.create(
-			[conference_id, :description, :file, :name, :votes
-				{name:'Poster 1', description:'poster on pdf', conference_id:'4', votes:'4', file: File.open(Rails.root.join('public/images/posters/poster.pdf')) }
+			[
+				{name:'Poster 1', description:'poster on pdf', conference_id:'4', votes:'4', file: File.open(Rails.root.join('public/images/posters/poster.pdf')) },
 				{name:'Poster 2', description:'Image poster', conference_id:'4', votes:'3', file: File.open(Rails.root.join('public/images/posters/poster-image.png'))}
 			]
 			)
