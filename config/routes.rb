@@ -30,6 +30,10 @@ Nifty::Application.routes.draw do
   
   match 'download_poster' => 'posters#download_poster', :as => :download_poster
   
+  match 'download_poster_info' => 'posters#download_poster_info', :as => :download_poster_info
+  
+  match 'download_paper' => 'events#download_paper', :as => :download_paper
+  
   match 'vote' => 'posters#vote', :as => :vote
 
   resources :users 

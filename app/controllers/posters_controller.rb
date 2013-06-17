@@ -85,11 +85,20 @@ class PostersController < ApplicationController
     end
   end
   
-  def download_poster
+  def download_poster_info
     @poster = Poster.find(params[:id])
     send_file(@poster.file.path,
           :filename => @poster.file.filename,
           :type => @poster.file.file.extension.downcase,
+          :disposition => 'attachment',
+          :url_based_filename => false)
+  end
+  
+  def download_poster
+    @poster = Poster.find(params[:id])
+    send_file(@poster.poster.path,
+          :filename => @poster.poster.filename,
+          :type => @poster.poster.file.extension.downcase,
           :disposition => 'attachment',
           :url_based_filename => false)
   end

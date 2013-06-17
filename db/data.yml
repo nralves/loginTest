@@ -1,0 +1,90 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - password_hash
+  - password_salt
+  - created_at
+  - updated_at
+  - name
+  - title
+  - organization
+  - homepage
+  - photo
+  records: 
+  - - 1
+    - a@a.com
+    - $2a$10$SQupnSQHUPK4XYbw9z9r6.S0aNMO.AH6.v1DAJJ6JZFeB/aLKWKva
+    - $2a$10$SQupnSQHUPK4XYbw9z9r6.
+    - '2013-06-14 22:43:38.301681'
+    - '2013-06-14 22:43:38.301681'
+    - ''
+    - ''
+    - ''
+    - ''
+    - 
+
+---
+events:
+  columns:
+  - id
+  - name
+  - abstract
+  - block_id
+  - file
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - The Bro Code
+    - Where the bros meet the code
+    - 
+    - The_Bro_Code.pdf
+    - '2013-06-14 18:27:58.949321'
+    - '2013-06-14 18:27:58.949321'
+
+---
+conferences:
+  columns:
+  - id
+  - name
+  - begin
+  - end
+  - location
+  - logo
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - inforum
+    - '2013-06-14 00:00:00.000000'
+    - '2013-06-14 00:00:00.000000'
+    - Evora
+    - 
+    - '2013-06-14 18:03:26.528103'
+    - '2013-06-14 18:03:26.528103'
+
+---
+posters:
+  columns:
+  - id
+  - name
+  - description
+  - file
+  - poster
+  - conference_id
+  - votes
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - Teste
+    - New upload
+    - Programa20EPCG.pdf
+    - HMP_posterV1.png
+    - 1
+    - 0
+    - '2013-06-14 18:05:15.416331'
+    - '2013-06-14 18:05:15.416331'

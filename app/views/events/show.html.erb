@@ -9,12 +9,13 @@
   <b>Abstract:</b>
   <%= @event.abstract %>
 </p>
-
+<% if !@event.block.nil? %>
 <p>
+
   <b>Block:</b>
   <%= @event.block.name %>
 </p>
-
+<% end %>
   <% @event.lecturers.each do |lecturer| %>
 	<div>
 		<%= lecturer.name %><br>

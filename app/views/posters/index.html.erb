@@ -24,13 +24,25 @@
     <td><%= poster.description %></td>
     <td>
 	<% if poster.file?%>
-		<%= link_to 'Download Poster', :action => :download_poster, :id => poster.id %><br />
+		<%= link_to 'Download Poster info', :action => :download_poster_info, :id => poster.id %><br />
 		<%= poster.file.filename %><br />
 		File type: <%= poster.file.file.extension.downcase %>;<br />
 		File size: <%= poster.file.file.size/1000%> kbs;<br />
 	<% else %>
+		No poster info available
+	<% end %>
+	<br />
+		<hr>
+	<br />
+	<% if poster.file?%>
+		<%= link_to 'Download Poster', :action => :download_poster, :id => poster.id %><br />
+		<%= poster.poster.filename %><br />
+		File type: <%= poster.poster.file.extension.downcase %>;<br />
+		File size: <%= poster.poster.file.size/1000%> kbs;<br />
+	<% else %>
 		No poster available
 	<% end %>
+	
 	</td>
     <td><%= poster.conference.name %></td>
     <td><%= poster.votes %></td>

@@ -17,12 +17,17 @@
   </div>
   <div class="field">
     <%= f.label :abstract %><br />
-    <%= f.text_field :abstract %>
+    <%= f.text_area :abstract %>
   </div>
   </div>
   
+   <div class="field">
+    <%= f.label :file %><br />
+    <%= f.file_field :file %>  
+  </div>
+  <br />
   <%= collection_select(:event, :block_id, @blocks, :id, :name_and_date, {:prompt => false })  %>
-  
+  <br />
   <% @lecturers.each do |lecturer| %>
 	<div>
 		<%= check_box_tag "event[lecturer_ids][]", lecturer.id, @event.lecturers.include?(lecturer) %>
@@ -30,7 +35,7 @@
 	</div>
   <% end %>
   
-  
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

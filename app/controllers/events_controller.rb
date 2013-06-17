@@ -84,4 +84,14 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def download_paper
+	@event = Event.find(params[:id])
+    send_file(@event.file.path,
+          :filename => @event.file.filename,
+          :type => @event.file.file.extension.downcase,
+          :disposition => 'attachment',
+          :url_based_filename => false)
+  end
+
 end

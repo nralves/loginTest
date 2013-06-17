@@ -4,6 +4,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :name
       t.text :abstract
 	  t.integer :block_id
+	  t.string :file
       t.timestamps
     end
   end

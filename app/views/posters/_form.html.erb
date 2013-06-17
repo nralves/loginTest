@@ -23,6 +23,11 @@
     <%= f.label :file %><br />
     <%= f.file_field :file %>  
   </div>
+  <br />
+  <div class="field">
+    <%= f.label :poster %><br />
+    <%= f.file_field :poster %>  
+  </div>
 
   <%= collection_select(:poster, :conference_id, @conferences, :id, :name_and_date, {:prompt => false })  %>
   

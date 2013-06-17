@@ -11,6 +11,7 @@
     <th>Abstract</th>
     <th>Lecturers</th>
     <th>Block</th>
+	<th>Paper</th>
   </tr>
 
 <% @events.each do |event| %>
@@ -24,10 +25,25 @@
 			</div>
 		<% end %>
 	</td>
+	
 	<td>
+	<% if !event.block.nil? %>
 			<div>
 				<%= event.block.name %><br>
 			</div>
+		<% end %>
+	</td>
+
+	<td>
+		<% if event.file?%>
+		<%= link_to 'Download paper', :action => :download_paper, :id => event.id %><br />
+		<%= event.file.filename %><br />
+		File type: <%= event.file.file.extension.downcase %>;<br />
+		File size: <%= event.file.file.size/1000%> kbs;<br />
+	<% else %>
+		No paper available
+	<% end %>
+	
 	
 	</td>
 	
