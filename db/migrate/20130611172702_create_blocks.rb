@@ -6,6 +6,7 @@ class CreateBlocks < ActiveRecord::Migration
       t.datetime :end
       t.string :room
       t.integer :conference_id
+	  t.integer :track_id
 
       t.timestamps
     end

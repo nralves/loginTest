@@ -29,8 +29,10 @@
     <%= f.file_field :poster %>  
   </div>
 
+  <h3>Conference</h3>
   <%= collection_select(:poster, :conference_id, @conferences, :id, :name_and_date, {:prompt => false })  %>
-  
+  <br />
+  <br />
   <div class="field">
     <%= f.label :votes %><br />
     <%= f.number_field :votes, :min=>0, :value =>0 %>

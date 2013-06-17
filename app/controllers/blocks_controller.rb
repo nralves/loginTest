@@ -26,6 +26,7 @@ class BlocksController < ApplicationController
   def new
     @block = Block.new
 	@conferences = Conference.all
+	@tracks = Track.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +38,7 @@ class BlocksController < ApplicationController
   def edit
     @block = Block.find(params[:id])
 	@conferences = Conference.all
+	@tracks = Track.all
   end
 
   # POST /blocks
@@ -44,6 +46,7 @@ class BlocksController < ApplicationController
   def create
     @block = Block.new(params[:block])
 	@conferences = Conference.all
+	@tracks = Track.all
 
     respond_to do |format|
       if @block.save
@@ -61,6 +64,7 @@ class BlocksController < ApplicationController
   def update
     @block = Block.find(params[:id])
 	@conferences = Conference.all
+	@tracks = Track.all
 
     respond_to do |format|
       if @block.update_attributes(params[:block])

@@ -1,4 +1,7 @@
 Nifty::Application.routes.draw do
+  resources :tracks
+
+
   resources :posters
 
   resources :blocks

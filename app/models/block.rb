@@ -1,7 +1,8 @@
 class Block < ActiveRecord::Base
-  attr_accessible :begin, :conference_id, :end, :name, :room
+  attr_accessible :begin, :conference_id, :track_id,:end, :name, :room
   
   belongs_to :conference
+  belongs_to :track
   has_many :events
   
   

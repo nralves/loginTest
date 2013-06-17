@@ -1,21 +1,15 @@
 <h1>Listing posters</h1>
 
 <%= link_to 'New Poster', new_poster_path %><br />
-<%= link_to 'Conferences', conferences_path %>
-<%= link_to 'Blocks', blocks_path %>
-<%= link_to 'Events', events_path %>
-<%= link_to 'Lecturers', lecturers_path %>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
-    <th>File</th>
+    <th>Poster Files</th>
     <th>Conference</th>
     <th>Votes</th>
     <th>ID</th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @posters.each do |poster| %>
@@ -31,7 +25,7 @@
 	<% else %>
 		No poster info available
 	<% end %>
-	<br />
+	<br /><br />
 		<hr>
 	<br />
 	<% if poster.file?%>

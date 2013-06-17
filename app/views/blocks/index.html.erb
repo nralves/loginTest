@@ -1,9 +1,6 @@
 <h1>Listing blocks</h1>
 
 <%= link_to 'New Block', new_block_path %><br />
-<%= link_to 'Conferences', conferences_path %>
-<%= link_to 'Events', events_path %>
-<%= link_to 'Lecturers', lecturers_path %>
 
 <table>
   <tr>
@@ -12,7 +9,7 @@
     <th>End</th>
     <th>Room</th>
     <th>Conference</th>
-    <th></th>
+    <th>Track</th>
     <th></th>
     <th></th>
   </tr>
@@ -24,6 +21,7 @@
     <td><%= block.end %></td>
     <td><%= block.room %></td>
     <td><%= block.conference.name %></td>
+	<td><%= block.track.name %></td>
     <td><%= link_to 'Show', block %></td>
     <td><%= link_to 'Edit', edit_block_path(block) %></td>
     <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
