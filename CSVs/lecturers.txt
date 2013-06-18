@@ -1,0 +1,5 @@
+﻿name, title, organization, country, homepage, resume, photo
+Fausto Mourato,Prof.,FCT/UNL,Portugal,fausto.fct.unl.pt,,photo.jpg
+Fernando Birra,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,,profBirra.png
+Manuel Próspero dos Santos,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,,mps.jpg
+José Luís Encarnação,Prof.,Universidade Técnica de Darmstadt,Alemanha,jle.utd.com,De 1987  2006...,photo.jpg

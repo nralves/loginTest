@@ -107,7 +107,10 @@ class ConferencesController < ApplicationController
   
   end
   
-  
+  def import
+	Conference.import(params[:file])
+	redirect_to root_url, notice: "Conferences imported."
+end
   
   
 end

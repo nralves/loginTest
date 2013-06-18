@@ -1,0 +1,3 @@
+﻿nome,description,poster,resume
+Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispositivos Móveis, Aplicação para Advertisement,poster.png,utilizacao objectos.pdf
+Realidade Aumentada para Caça ao Tesouro em Larga Escala,,poster.png,realidade aumentada.pdf

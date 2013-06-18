@@ -1,0 +1,5 @@
+﻿event_name,lecturer_name
+Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,Fausto Mourato
+Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,Fernando Birra
+Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,Manuel Próspero dos Santos
+Mobile Empowerment - The new paradigm shift in today's economies,José Luís Encarnação

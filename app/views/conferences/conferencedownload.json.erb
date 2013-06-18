@@ -18,6 +18,9 @@
 														"name": "<%= block.name %>",
 														"room": "<%= block.room %>",
 														"begin": "<%= block.begin %>",
+														<% if block.track? %>
+														"track": "<%= block.track.name %>",
+														<% end %>
 														"end": "<%= block.end %>",
 													
 							

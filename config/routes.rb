@@ -43,7 +43,9 @@ Nifty::Application.routes.draw do
 
   resources :sessions
   
-  resources :conferences
+  resources :conferences do
+	collection { post :import }
+end
   
   resources :news
 

@@ -1,0 +1,5 @@
+﻿bckName,bckRoom,bckBegin,bckEnd,trackname
+Jogos e Entretenimento,laranja,25-10-2013 10:00,25-10-2013 11:00,Sessão Geral
+Recepção e Registo,,25-10-2013 09:00,25-10-2013 09:30,recepção
+Sessão de Abertura,,25-10-2013 09:30,25-10-2013 10:00,recepção
+Orador Convidado Prof. J.l. Encarnação,,25-10-2013 11:30,25-10-2013 12:30,Orador Convidado

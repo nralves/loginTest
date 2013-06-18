@@ -1,0 +1,2 @@
+﻿name,begin,end,location,logo
+Encontro de Português Computação Gráfica 2012,25-10-2013 09:00,26-10-2013 23:00,Viana do Castelo,logo.png

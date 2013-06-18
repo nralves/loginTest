@@ -11,6 +11,7 @@
     <th>End</th>
     <th>Location</th>
     <th>Logo</th>
+	<th>ID</th>
   </tr>
 
 <% @conferences.each do |conference| %>
@@ -20,11 +21,19 @@
     <td><%= conference.end.strftime("%d - %B %Y")%></td>
     <td><%= conference.location %></td>
 	<td><%= image_tag conference.logo_url(:thumb).to_s %>  </td>
+	<td><%= conference.id %></td>
     <td><%= link_to 'Show', conference %></td>
     <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
     <td><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
+
+<h2>Import Products</h2>
+
+<%= form_tag import_conferences_path, multipart: true do %>
+  <%= file_field_tag :file %><br /><br />
+  <%= submit_tag "Import" %>
+<% end %>
 
 <br />
