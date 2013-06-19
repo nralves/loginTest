@@ -30,7 +30,12 @@
 																	{
 																		"name": "<%= event.name %>",
 																		"abstract": "<%= event.abstract %>",
-																		
+																		<% if event.file? %>
+																			"file": "<%= event.file.name %>",
+																			"path": "<%= event.file.path %>"
+																		<% else %>
+																			"file": "no_file",
+																		<% end %>
 																				"lecturers": {
 																						"lecturer": [
 																							<% event.lecturers.each do |lecturer| %>
