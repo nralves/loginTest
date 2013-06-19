@@ -3,3 +3,18 @@ Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plata
 Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,Fernando Birra
 Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,Manuel Próspero dos Santos
 Mobile Empowerment - The new paradigm shift in today's economies,José Luís Encarnação
+Figuras de Ação como Interfaces Tangíveis para a Criação de Filmes de Animação,Ido Iurgel
+Figuras de Ação como Interfaces Tangíveis para a Criação de Filmes de Animação,Pedro Ribeiro
+Adaptação de Cor para Dicromatas na Visualização de Imagens,Madalena Ribeiro
+Adaptação de Cor para Dicromatas na Visualização de Imagens,Abel Gomes
+Identificação de Objectos em Imagens tomográficas através de GPGPUs,Fernando Birra
+Identificação de Objectos em Imagens tomográficas através de GPGPUs,Bruno Preto
+Identificação de Objectos em Imagens tomográficas através de GPGPUs,Pedro Medeiros
+Adaptação de Simbologia em Realidade Aumentada,Maria Beatriz Carmo
+Modelação Procedimental de Ambiente Rodoviários para Simulação de Condução,Carlos Campos
+Modelação Procedimental de Ambiente Rodoviários para Simulação de Condução,João Miguel Leitão
+Modelação Procedimental de Ambiente Rodoviários para Simulação de Condução,António Coelho
+CaS: Collection Aware Segmentation,Raquel Costa
+CaS: Collection Aware Segmentation,Manuel J. Fonseca
+CaS: Collection Aware Segmentation,Alferedo Ferreira
+ERAS - An Ontology-Based Tool for Expeditios Reconstruction of Virtual Cultural Heritage Sites,António Coelho

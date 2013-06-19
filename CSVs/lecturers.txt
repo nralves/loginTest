@@ -2,4 +2,27 @@
 Fausto Mourato,Prof.,FCT/UNL,Portugal,fausto.fct.unl.pt,,photo.jpg
 Fernando Birra,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,,profBirra.png
 Manuel Próspero dos Santos,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,,mps.jpg
-José Luís Encarnação,Prof.,Universidade Técnica de Darmstadt,Alemanha,jle.utd.com,De 1987  2006...,photo.jpg
+José Luís Encarnação,Prof.,Universidade Técnica de Darmstadt,Portugal,jle.utd.com,De 1987  2006...,photo.jpg
+Verónica Orvalho,Prof.ª,Universidade do Porto,Portugal,vo.feup.pt,"Doutorou-se em Desenvolvimento de Software (Computação Gráfica) pela Universidade Politécnica de Catalunya (2007), onde fez investigação",photo.jpg
+Pedro Ribeiro,,,Portugal,,,photo.jpg
+Ido Iurgel,,,Portugal,,,photo.jpg
+Nuno Cardoso,,,Portugal,,,photo.jpg
+Fábio Rocha,,,Portugal,,,photo.jpg
+Pedro Miguel Moreira,,,Portugal,,,photo.jpg
+João Fonseca,,,Portugal,,,photo.jpg
+Gilberto Felgueiras,,,Portugal,,,photo.jpg
+Madalena Ribeiro,,,Portugal,,,photo.jpg
+Abel Gomes,,,Portugal,,,photo.jpg
+João Ferreira Nunes,,,Portugal,,,photo.jpg
+João Manuel R. S. Tavares,,,Portugal,,,photo.jpg
+Bruno Preto,,,Portugal,,,photo.jpg
+Pedro Medeiros,,,Portugal,,,photo.jpg
+Maria Beatriz Carmo,,,Portugal,,,photo.jpg
+Waldir Pimenta,,,Portugal,,,photo.jpg
+Carlos Campos,,,Portugal,,,photo.jpg
+João Miguel Leitão,,,Portugal,,,photo.jpg
+António Coelho,,,Portugal,,,photo.jpg
+Raquel Costa,,,Portugal,,,photo.jpg
+Manuel J. Fonseca,,,Portugal,,,photo.jpg
+Alferedo Ferreira,,,Portugal,,,photo.jpg
+Nuno Rodrigues,,,Portugal,,,photo.jpg

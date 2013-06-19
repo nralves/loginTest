@@ -6,7 +6,6 @@
 						"location": "<%= @conference.location %>",
 						"begin": "<%= @conference.begin %>",
 						"end": "<%= @conference.end %>",
-						"end": "<%= @conference.end %>",
 						"logo": "<%= @conference.logo_url(:thumb).to_s %>",
 						
 						"blocks":
@@ -18,7 +17,7 @@
 														"name": "<%= block.name %>",
 														"room": "<%= block.room %>",
 														"begin": "<%= block.begin %>",
-														<% if block.track? %>
+														<% if !block.track.nil? %>
 														"track": "<%= block.track.name %>",
 														<% end %>
 														"end": "<%= block.end %>",
@@ -31,8 +30,8 @@
 																		"name": "<%= event.name %>",
 																		"abstract": "<%= event.abstract %>",
 																		<% if event.file? %>
-																			"file": "<%= event.file.name %>",
-																			"path": "<%= event.file.path %>"
+																			"file_type": "<%= event.file.file.extension.downcase %>",
+																			"size": "<%= event.file.size %>",
 																		<% else %>
 																			"file": "no_file",
 																		<% end %>
@@ -101,14 +100,14 @@
 													<% end %>
 													<% if poster.poster? %>
 														"file_type": "<%= poster.poster.file.extension.downcase %>",
-														"size": "<%= poster.poster.size %>",
+														"size": "<%= poster.poster.size %>"
 													<% else %>
 														"file_type": "no_file"
 													<% end %>
 													
 												},
 												<% end %>
-									],
+									]
 							
 							
 							

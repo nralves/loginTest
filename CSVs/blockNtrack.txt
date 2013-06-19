@@ -1,5 +1,14 @@
 ﻿bckName,bckRoom,bckBegin,bckEnd,trackname
 Jogos e Entretenimento,laranja,25-10-2013 10:00,25-10-2013 11:00,Sessão Geral
-Recepção e Registo,,25-10-2013 09:00,25-10-2013 09:30,recepção
-Sessão de Abertura,,25-10-2013 09:30,25-10-2013 10:00,recepção
-Orador Convidado Prof. J.L. Encarnação,,25-10-2013 11:30,25-10-2013 12:30,Orador Convidado
+Recepção e Registo,laranja,25-10-2013 09:00,25-10-2013 09:30,recepção
+Sessão de Abertura,laranja,25-10-2013 09:30,25-10-2013 10:00,recepção
+Orador Convidado Prof. J.L. Encarnação,azul,25-10-2013 11:30,25-10-2013 12:30,Orador Convidado
+Prémio J.L. Encarnação,laranja,25-10-2013 12:30,25-10-2013 13:00,Prémio
+Visão por Computador e Realidade Aumentada,laranja,25-10-2013 14:30,25-10-2013 16:00,Sessão Geral
+Modelação e Reconstrução,azul,25-10-2013 16:30,25-10-2013 18:00,Sessão Geral
+Evento Social,laranja,25-10-2013 14:30,25-10-2013 16:00,Social
+Interação,amarela,26-10-2013 09:30,26-10-2013 11:00,Sessão Geral
+Aplicações,amarela,26-10-2013 11:30,26-10-2013 13:00,Sessão Geral
+Orador Convidado Prof. Verónica Orvalho,azul,26-10-2013 14:30,26-10-2013 15:30,Orador Convidado
+Síntese e Visualização,laranja,26-10-2013 16:00,26-10-2013 17:30,Sessão Geral
+Encerramento,laranja,26-10-2013 17:30,26-10-2013 18:00,Encerramento

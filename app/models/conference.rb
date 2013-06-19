@@ -19,7 +19,8 @@ class Conference < ActiveRecord::Base
 	##  -> Tracks with the same name will be treated as one
 	##  -> Events must have a unique name on one conference
 	##	-> Lecturers must have a unique name on one conference
-	##	-> On each CSV file you can only use the commas to separete each value
+	##	-> On each CSV file you use the commas to separete each value. If you need to put commas on a value, put that
+	##		value in quotes. Example: Maria,"Studied Foobar on England, Holland and Spain.",Professor
 	##	-> Be carful with spaces on the values Exemple: Good: "name,track" | Bad: "name, track"
 	##	-> CSV files must be enconded on UTF-8
 	############

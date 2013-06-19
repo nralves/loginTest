@@ -1,3 +1,7 @@
 ﻿nome,description,poster,resume
 Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispositivos Móveis, Aplicação para Advertisement,poster.png,utilizacao objectos.pdf
 Realidade Aumentada para Caça ao Tesouro em Larga Escala,,poster.png,realidade aumentada.pdf
+Human Motion Analysis Tools,,poster.png,humanMotion.pdf
+An Intuitive Navigation System: Augmented Reality on the Car Windshield,,poster.png,an intuitive.pdf
+Extração de informação de Texto Formal para a Modelação Expedita de Edificios Monumentais,,poster.png,extracaoinfo.pdf
+Outdoor Sports Performance Analysis Enchncement and Multimedia Documentation,,poster.png,outdoors sports.pdf

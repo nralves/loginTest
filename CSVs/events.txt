@@ -2,3 +2,9 @@
 Sistema Integrado de Geração Automática de Conteúdo para Videojogos de Plataformas,,Jogos e Entretenimento,sistema integrado.pdf
 Figuras de Ação como Interfaces Tangíveis para a Criação de Filmes de Animação,,Jogos e Entretenimento,figuras de acao.pdf
 Mobile Empowerment - The new paradigm shift in today's economies,,Orador Convidado Prof. J.L. Encarnação,figuras de acao.pdf
+Adaptação de Cor para Dicromatas na Visualização de Imagens,,Visão por Computador e Realidade Aumentada,adaptacao da cor.pdf
+Identificação de Objectos em Imagens tomográficas através de GPGPUs,,Visão por Computador e Realidade Aumentada,indentificacao de objectos.pdf
+Adaptação de Simbologia em Realidade Aumentada,,Visão por Computador e Realidade Aumentada,adaptacao simbologia.pdf
+Modelação Procedimental de Ambiente Rodoviários para Simulação de Condução,,Modelação e Reconstrução,modelacao procedimental.pdf
+CaS: Collection Aware Segmentation,,Modelação e Reconstrução,CaS collection.pdf
+ERAS - An Ontology-Based Tool for Expeditios Reconstruction of Virtual Cultural Heritage Sites,,Modelação e Reconstrução,ERAS.pdf
