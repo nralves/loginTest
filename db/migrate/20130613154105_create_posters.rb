@@ -5,7 +5,7 @@ class CreatePosters < ActiveRecord::Migration
       t.text :description
       t.string :file
 	  t.string :poster
-      t.integer :conference_id
+      t.integer :block_id
       t.integer :votes
 
       t.timestamps

@@ -1,0 +1,11 @@
+﻿lecturer_name,poster_name
+Nuno Cardoso,Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispositivos Móveis
+Fábio Rocha,Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispositivos Móveis
+Pedro Miguel Moreira,Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispositivos Móveis
+Pedro Miguel Moreira,Realidade Aumentada para Caça ao Tesouro em Larga Escala
+João Fonseca,Realidade Aumentada para Caça ao Tesouro em Larga Escala
+Gilberto Felgueiras,Realidade Aumentada para Caça ao Tesouro em Larga Escala
+João Ferreira Nunes,Human Motion Analysis Tools
+Pedro Miguel Moreira,Human Motion Analysis Tools
+João Manuel R. S. Tavares,Human Motion Analysis Tools
+Waldir Pimenta,An Intuitive Navigation System: Augmented Reality on the Car Windshield

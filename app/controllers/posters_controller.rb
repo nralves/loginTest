@@ -25,7 +25,8 @@ class PostersController < ApplicationController
   # GET /posters/new.json
   def new
     @poster = Poster.new
-	@conferences = Conference.all
+	@blocks = Block.all
+	@lecturers = Lecturer.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,14 +37,16 @@ class PostersController < ApplicationController
   # GET /posters/1/edit
   def edit
     @poster = Poster.find(params[:id])
-	@conferences = Conference.all
+	@blocks = Block.all
+	@lecturers = Lecturer.all
   end
 
   # POST /posters
   # POST /posters.json
   def create
     @poster = Poster.new(params[:poster])
-	@conferences = Conference.all
+	@blocks = Block.all
+	@lecturers = Lecturer.all
 
     respond_to do |format|
       if @poster.save
@@ -60,7 +63,8 @@ class PostersController < ApplicationController
   # PUT /posters/1.json
   def update
     @poster = Poster.find(params[:id])
-	@conferences = Conference.all
+	@blocks = Block.all
+	@lecturers = Lecturer.all
 
     respond_to do |format|
       if @poster.update_attributes(params[:poster])

@@ -3,7 +3,6 @@ class Conference < ActiveRecord::Base
   
   has_many :blocks, :dependent => :destroy
   has_many :news, :dependent => :destroy
-  has_many :posters, :dependent => :destroy
   
   mount_uploader :logo, AvatarUploader
   
@@ -46,27 +45,6 @@ class Conference < ActiveRecord::Base
 			c.logo = row[4]#File.open("CSVs/resources/" + row[4])#
 			c.save
 		end
-		
-	######################
-	## Adicionar Posters #
-	######################
-	
-	# Step 1: convert the uploaded file object to a file name
-	file_name = "CSVs/posters.txt"
-	# Step 2: To get the input text and see if it's what you expect
-	csv_file = File.read(file_name, {encoding: 'UTF-8'})
-		
-		csv = CSV.parse(csv_file, :headers => true)
-		csv.each do |row|
-			p = Poster.new
-			p.name = row[0]
-			p.description = row[1]
-			p.poster = File.open("CSVs/resources/posters/" + row[2])
-			p.file = File.open("CSVs/resources/resumes/" + row[3])
-			p.votes = 0
-			p.conference_id = c.id
-			p.save
-		end	
 	
 		
 		
@@ -100,6 +78,30 @@ class Conference < ActiveRecord::Base
 			b.track_id = t.id
 			b.save
 			b_hash[b.name] = b.id
+		end
+		
+		
+		######################
+	## Adicionar Posters #
+	######################
+	p_hash = {}
+	
+	# Step 1: convert the uploaded file object to a file name
+	file_name = "CSVs/posters.txt"
+	# Step 2: To get the input text and see if it's what you expect
+	csv_file = File.read(file_name, {encoding: 'UTF-8'})
+		
+		csv = CSV.parse(csv_file, :headers => true)
+		csv.each do |row|
+			p = Poster.new
+			p.name = row[0]
+			p.description = row[1]
+			p.poster = File.open("CSVs/resources/posters/" + row[2])
+			p.file = File.open("CSVs/resources/resumes/" + row[3])
+			p.votes = 0
+			p.block_id = b_hash[row[4]]
+			p.save
+			p_hash[p.name] = p.id
 		end
 		
 		
@@ -167,6 +169,27 @@ class Conference < ActiveRecord::Base
 			#insert into table
 				connection.execute("Insert INTO events_lecturers (event_id, lecturer_id) VALUES(#{e_hash[row[0]]},#{l_hash[row[1]]});")
 		end
+		
+		
+		
+	##################################
+	## Adicionar Lecturers a Posters #
+	##################################
+	
+	# Step 1: convert the uploaded file object to a file name
+	file_name = "CSVs/lecturers_posters.txt"
+	# Step 2: To get the input text and see if it's what you expect
+	csv_file = File.read(file_name, {encoding: 'UTF-8'})
+
+		# Get the current DB connection
+		connection = ActiveRecord::Base.connection();
+		
+		csv = CSV.parse(csv_file, :headers => true)
+		csv.each do |row|
+			#insert into table
+				connection.execute("Insert INTO lecturers_posters (lecturer_id, poster_id) VALUES(#{l_hash[row[0]]},#{p_hash[row[1]]});")
+		end
+	
 	
 		
 	end

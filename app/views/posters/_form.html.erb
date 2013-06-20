@@ -30,13 +30,22 @@
   </div>
 
   <h3>Conference</h3>
-  <%= collection_select(:poster, :conference_id, @conferences, :id, :name_and_date, {:prompt => false })  %>
+  <%= collection_select(:poster, :block_id, @blocks, :id, :name_and_date, {:prompt => false })  %>
   <br />
   <br />
   <div class="field">
     <%= f.label :votes %><br />
     <%= f.number_field :votes, :min=>0, :value =>0 %>
   </div>
+  <br /><br />
+  <h3>Lecturers</h3>
+   <% @lecturers.each do |lecturer| %>
+	<div>
+		<%= check_box_tag "poster[lecturer_ids][]", lecturer.id, @poster.lecturers.include?(lecturer) %>
+		<%= lecturer.name %>
+	</div>
+   <% end %>
+	<br /><br />
   <div class="actions">
     <%= f.submit %>
   </div>

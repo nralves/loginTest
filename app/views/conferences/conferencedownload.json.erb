@@ -1,120 +1,119 @@
 {
-		"conference":
-					{
-						"id": "<%= @conference.id %>",
-						"name": "<%= @conference.name %>",
-						"location": "<%= @conference.location %>",
-						"begin": "<%= @conference.begin %>",
-						"end": "<%= @conference.end %>",
-						"logo": "<%= @conference.logo_url(:thumb).to_s %>",
+	"conference":{
+			"id": "<%= @conference.id %>",
+			"name": "<%= @conference.name %>",
+			"location": "<%= @conference.location %>",
+			"begin": "<%= @conference.begin %>",
+			"end": "<%= @conference.end %>",
+			"logo": "<%= @conference.logo_url(:thumb).to_s %>",
 						
-						"blocks":
-							{
-								"block": [
-								
-								<% @conference.blocks.each do |block| %>
-													{
-														"name": "<%= block.name %>",
-														"room": "<%= block.room %>",
-														"begin": "<%= block.begin %>",
-														<% if !block.track.nil? %>
-														"track": "<%= block.track.name %>",
+					"blocks":{
+						"block": [
+							<% @conference.blocks.each do |block| %>{
+												"block_id": "<%= block.id %>",
+												"name": "<%= block.name %>",
+												"room": "<%= block.room %>",
+												"begin": "<%= block.begin %>",
+												<% if !block.track.nil? %>
+												"track": "<%= block.track.name %>",
+												<% end %>
+												"end": "<%= block.end %>",
+							
+								"events": {
+									"event": [
+										<% block.events.each do |event| %>{
+														"event_id": "<%= event.id %>",
+														"name": "<%= event.name %>",
+														"abstract": "<%= event.abstract %>",
+														<% if event.file? %>
+														"file_type": "<%= event.file.file.extension.downcase %>",
+														"size": "<%= event.file.size %>",
+														<% else %>
+														"file": "no_file",
 														<% end %>
-														"end": "<%= block.end %>",
-													
-							
-														"events": {
-																"event": [
-																	<% block.events.each do |event| %>
-																	{
-																		"name": "<%= event.name %>",
-																		"abstract": "<%= event.abstract %>",
-																		<% if event.file? %>
-																			"file_type": "<%= event.file.file.extension.downcase %>",
-																			"size": "<%= event.file.size %>",
-																		<% else %>
-																			"file": "no_file",
-																		<% end %>
-																				"lecturers": {
-																						"lecturer": [
-																							<% event.lecturers.each do |lecturer| %>
-																							{
-																								"id": "<%= lecturer.id %>"	
-																								<% @lecturersArray << lecturer%>
-																							},
-																								<% end %>
-																						]
-																				}	
+																				
+											"lecturers": {
+													"lecturer": [
+														<% event.lecturers.each do |lecturer| %>{
+																	"id": "<%= lecturer.id %>"	
+																	<% @lecturersArray << lecturer%>
+														},
+														<% end %>
+													]
+											}	
 																		
-																	},
-																		<% end %>
-																]
-														}
-													
-													},
-		
-								<% end %>
-								]
-							},
-						
-						"news":  [
-										<% @conference.news.each do |news| %>
-												{
-												"title": "<%= news.title %>",
-												"body": "<%= news.body %>",
-												"updated at": "<%= news.updated_at %>"
-												},
-												<% end %>
-									],
-								
-					
-							
-						
-						"Lecturers":  [
-										<% @lecturersArray.each do |lecturer| %>
-												{
-													"id": "<%= lecturer.id %>",
-													"title": "<%= lecturer.title %>",
-													"name": "<%= lecturer.name %>",
-													"organization": "<%= lecturer.organization %>",
-													"country": "<%= lecturer.country %>",
-													"homepage": "<%= lecturer.homepage %>",
-													"resume": "<%= lecturer.resume %>",
-													"image": "<%= lecturer.image_url(:thumb).to_s %>"
-												},
-												<% end %>
-									],	
-									
-					"Posters":  [
-										<% @conference.posters.each do |poster| %>
-												{
+										},
+										<% end %>
+									]
+								},
+														
+								"posters": {								
+									"Poster":  [
+										<% block.posters.each do |poster| %>{
 													"id": "<%= poster.id %>",
 													"name": "<%= poster.name %>",
 													"description": "<%= poster.description %>",
+													"block_id": "<%= poster.block_id %>",
 													"votes": "<%= poster.votes %>",
-													<% if poster.file? %>
-														"file_type": "<%= poster.file.file.extension.downcase %>",
-														"size": "<%= poster.file.size %>",
-													<% else %>
-														"file_type": "no_file",
-													<% end %>
-													<% if poster.poster? %>
-														"file_type": "<%= poster.poster.file.extension.downcase %>",
-														"size": "<%= poster.poster.size %>"
-													<% else %>
-														"file_type": "no_file"
-													<% end %>
-													
-												},
+														
+												<% if poster.file? %>
+													"file_type": "<%= poster.file.file.extension.downcase %>",
+													"size": "<%= poster.file.size %>",
+												<% else %>
+													"file_type": "no_file",
 												<% end %>
+												
+												<% if poster.poster? %>
+													"file_type": "<%= poster.poster.file.extension.downcase %>",
+													"size": "<%= poster.poster.size %>",
+												<% else %>
+													"file_type": "no_file",
+												<% end %>
+		
+												"lecturers": {
+													"lecturer": [
+														<% poster.lecturers.each do |lecturer| %>{
+															"id": "<%= lecturer.id %>"	
+															<% @lecturersArray << lecturer%>
+														},
+														<% end %>
+													]
+												}		
+											},
+											<% end %>
 									]
-							
-							
-							
-							
-							
-							
-							
-					}
-					
+								}						
+						
+							},
+							<% end %>
+						]
+					},
+						
+					"news": [
+						<% @conference.news.each do |news| %>{
+									"news_id": "<%= news.id %>",
+									"title": "<%= news.title %>",
+									"body": "<%= news.body %>",
+									"updated at": "<%= news.updated_at %>"
+						},
+						<% end %>
+					],
+									
+									
+					"Lecturers":[
+				
+						<% @lecturersArray.uniq{|x| x.id}.each do |lecturer| %>{
+										"id": "<%= lecturer.id %>",
+										"title": "<%= lecturer.title %>",
+										"name": "<%= lecturer.name %>",
+										"organization": "<%= lecturer.organization %>",
+										"country": "<%= lecturer.country %>",
+										"homepage": "<%= lecturer.homepage %>",
+										"resume": "<%= lecturer.resume %>",
+										"image": "<%= lecturer.image_url(:thumb).to_s %>"
+						},
+						<% end %>
+					]
+		
+	}					
 } 
