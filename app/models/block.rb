@@ -3,7 +3,7 @@ class Block < ActiveRecord::Base
   
   belongs_to :conference
   belongs_to :track
-  has_many :events
+  has_many :events, :dependent => :destroy
   
   
   def name_and_date

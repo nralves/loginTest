@@ -9,18 +9,18 @@ class Conference < ActiveRecord::Base
   
    def name_and_date
     self.name + ' | ' + self.begin.to_formatted_s(:short)
-  end
+   end
   
   
   
 	############
-	## Pre-conditions: 
+	## Pre-conditions:
 	##  -> Blocks (sessions) must have a unique name on one conference
 	##  -> Tracks with the same name will be treated as one
 	##  -> Events must have a unique name on one conference
 	##	-> Lecturers must have a unique name on one conference
 	##	-> On each CSV file you use the commas to separete each value. If you need to put commas on a value, put that
-	##		value in quotes. Example: Maria,"Studied Foobar on England, Holland and Spain.",Professor
+	##		value in quotes. Example: 'Maria,"Studied Foobar on England, Holland and Spain.",Professor'
 	##	-> Be carful with spaces on the values Exemple: Good: "name,track" | Bad: "name, track"
 	##	-> CSV files must be enconded on UTF-8
 	############
