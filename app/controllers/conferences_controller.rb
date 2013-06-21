@@ -56,6 +56,7 @@ class ConferencesController < ApplicationController
   # PUT /conferences/1
   # PUT /conferences/1.json
   def update
+	params[:conference][:users_ids] ||= []  
     @conference = Conference.find(params[:id])
 
     respond_to do |format|
@@ -110,7 +111,30 @@ class ConferencesController < ApplicationController
   def import
 	Conference.import(params[:file])
 	redirect_to root_url, notice: "Conferences imported."
-end
+  end
+
+  #Pre condicao: User registado na app
+  def addUser
+	conference = Conference.find(params[:id])
+	userTest = conference.users.find_by_email(params[:email])
+	if userTest.nil?
+		conference.users << User.find_by_email(params[:email])
+		redirect_to conferences_url, notice: 'User Addad'
+	else
+		redirect_to conferences_url, notice: 'Cant add the same User twice'
+	end
+  end
+  
+  def removeUser
+	conference = Conference.find(params[:id])
+	user = conference.users.find_by_email(params[:email])
+	if !user.nil?
+	conference.users.delete(user)
+	redirect_to conferences_url, notice: 'User removed'
+	else
+		redirect_to conferences_url, notice: 'Cant remove a non-addad user'
+	end
+  end
   
   
 end

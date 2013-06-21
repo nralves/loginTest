@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   
+  has_and_belongs_to_many :conferences
   has_many :requests
   has_many :friendships
   has_many :friends, :through => :friendships
@@ -8,8 +9,9 @@ class User < ActiveRecord::Base
   
   
   # new columns need to be added here to be writable through mass assignment
-  attr_accessible :email, :password, :password_confirmation, :name, :title, :organization, :homepage, :photo
-
+  attr_accessible :email, :password, :password_confirmation, :name, :title, :conference_ids, :organization, :homepage, :photo, :user_id
+  accepts_nested_attributes_for  :conferences
+  
   attr_accessor :password
   before_save :prepare_password
 

@@ -1,4 +1,7 @@
 <h1>Listing conferences</h1>
+<% if flash[:notice] %>
+    <div id="notice"><%= flash[:notice] %></div>
+<% end %>
 
 
 <%= link_to 'New Conference', new_conference_path %><br />
@@ -12,6 +15,7 @@
     <th>Location</th>
     <th>Logo</th>
 	<th>ID</th>
+	<th>Users Associated</th>
   </tr>
 
 <% @conferences.each do |conference| %>
@@ -22,6 +26,14 @@
     <td><%= conference.location %></td>
 	<td><%= image_tag conference.logo_url(:thumb).to_s %>  </td>
 	<td><%= conference.id %></td>
+	<td>
+	<% conference.users.each do |user| %>
+			<div>
+				<%= user.name %><br /><br />
+				<%= user.id %><br /><br />
+			</div>
+		<% end %>
+	</td>
     <td><%= link_to 'Show', conference %></td>
     <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
     <td><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>

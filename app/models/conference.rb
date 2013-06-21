@@ -1,9 +1,11 @@
 class Conference < ActiveRecord::Base
-  attr_accessible :begin, :end, :location, :logo, :name
+  attr_accessible :begin, :end, :location, :logo, :name, :conference_id, :user_ids
   
+  has_and_belongs_to_many :users
   has_many :blocks, :dependent => :destroy
   has_many :news, :dependent => :destroy
   
+  accepts_nested_attributes_for :users
   mount_uploader :logo, AvatarUploader
   
    def name_and_date

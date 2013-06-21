@@ -45,6 +45,8 @@ Nifty::Application.routes.draw do
   
   resources :conferences do
 	collection { post :import }
+	collection { post :addUser }
+	collection { post :removeUser }
 end
   
   resources :news
