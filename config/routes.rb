@@ -38,6 +38,14 @@ Nifty::Application.routes.draw do
   match 'download_paper' => 'events#download_paper', :as => :download_paper
   
   match 'vote' => 'posters#vote', :as => :vote
+  
+  match 'getrequests' => 'users#getrequests', :as => :getrequests
+  
+  match 'makerequest' => 'users#makerequest', :as => :makerequest
+  
+  match 'rejectrequest' => 'users#rejectrequest', :as => :rejectrequest
+  
+  match 'removefriend' => 'users#removefriend', :as => :removefriend
 
   resources :users 
 

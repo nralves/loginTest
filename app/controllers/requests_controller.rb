@@ -41,9 +41,13 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
   
-    @request = Request.new(:requester_id=>params[:requester_id], :user_id=> params[:user_id])
-	request_test = Request.count(:all, :conditions => ["user_id = ? and requester_id=?",params[:user_id], params[:requester_id]])
+    @request = Request.new(:requester_id=>current_user.id, :user_id=> params[:user_id])
+	request_test = Request.count(:all, :conditions => ["user_id = ? and requester_id=?",params[:user_id], current_user.id])
 
+	puts "#####"
+	puts request_test
+	puts @request.requester_id
+	puts @request.user_id
 	
 	if @request.user_id != @request.requester_id && request_test == 0
 		respond_to do |format|
@@ -59,12 +63,12 @@ class RequestsController < ApplicationController
 		if request_test ==0
 			respond_to do |format|
 					format.html { redirect_to users_path, notice: 'You cant request yourself.' }
-					format.json { render json:@request.errors, status: :unprocessable_entity }
+					format.json { render json:@request.errors, status: :bad_request }
 			end
 		else
 			respond_to do |format|
 					format.html { redirect_to users_path, notice: 'You cant request the same person twice.' }
-					format.json { render json:@request.errors, status: :unprocessable_entity }
+					format.json { render json:@request.errors, status: :bad_request }
 			end
 		end
 	end

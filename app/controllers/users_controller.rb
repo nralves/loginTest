@@ -95,4 +95,78 @@ class UsersController < ApplicationController
       format.json
     end
   end
+  
+  def getrequests #MUST give the requester id
+	user = current_user
+	
+	if !user.nil?
+	requests = user.requests
+		respond_to do |format|
+			format.html { requests }
+			format.json { render :json => requests }
+		end
+	else
+		respond_to do |format|
+			format.html { redirect_to users_url }
+			format.json { head :no_content }
+		end
+	
+	end
+  end
+  
+  def rejectrequest
+	
+		if !current_user.nil?
+			request = current_user.requests.find(params[:id])
+			if !request.nil?
+				request.destroy
+				respond_to do |format|
+					format.html { redirect_to users_url, :notice => "OK" }
+					format.json { head :ok}
+				end
+			else
+			respond_to do |format|
+					format.html { redirect_to users_url, :notice => "Request no found" }
+					format.json { head :bad_request }
+				end
+			end
+		else
+			respond_to do |format|
+				format.html { redirect_to users_url, :notice => "Not loged in" }
+				format.json { head :unauthorized }
+			end
+		
+		end
+  end
+  
+   def removefriend
+	
+		if !current_user.nil?
+			friendship = current_user.friendships.where("friend_id = \"#{:friend_id}\"").first
+			
+			if !friendship.nil?
+				reverse_friendship = friendship.friend.friendships.where("friend_id = \"#{current_user.id}\"").first
+			end
+			
+			if !friendship.nil?
+				friendship.destroy
+				reverse_friendship.destroy
+				respond_to do |format|
+					format.html { redirect_to users_url, :notice => "OK" }
+					format.json { head :ok}
+				end
+			else
+			respond_to do |format|
+					format.html { redirect_to users_url, :notice => "Friendship not found" }
+					format.json { head :bad_request }
+				end
+			end
+		else
+			respond_to do |format|
+				format.html { redirect_to users_url, :notice => "Not loged in" }
+				format.json { head :unauthorized }
+			end
+		
+		end
+  end
 end

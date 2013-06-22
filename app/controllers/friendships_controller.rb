@@ -1,5 +1,6 @@
 class FriendshipsController < ApplicationController
 	  def create
+	  
 	  @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
 	  @reverse_friendship = @friendship.friend.friendships.build(:friend_id => current_user.id)
 	  @test_friendship = current_user.friendships.where("friend_id = \"#{params[:friend_id]}\"").first
@@ -9,18 +10,31 @@ class FriendshipsController < ApplicationController
 			flash[:notice] = "Added friend."
 			request = current_user.requests.where("requester_id = \"#{params[:friend_id]}\"").first
 			request.destroy
-			redirect_to root_url
+			
+			respond_to do |format|
+				format.html { redirect_to root_url }
+				format.json { head :ok }
+			end
 		  else
 			flash[:error] = "Unable to add friend."
-			redirect_to root_url
+			respond_to do |format|
+				format.html { redirect_to root_url }
+				format.json { head :unprocessable_entity }
+			end
 		  end
 	else
 		if !@test_friendship.nil?
 			flash[:error] = "You cant befriend the same user twice"
-			redirect_to root_url
+			respond_to do |format|
+				format.html { redirect_to root_url }
+				format.json { head :not_acceptable }
+			end
 		else
 			flash[:error] = "you cant befriend yourself"
-			redirect_to root_url
+			respond_to do |format|
+				format.html { redirect_to root_url }
+				format.json { head :not_acceptable }
+			end
 		end
 	end	
 end
