@@ -44,10 +44,6 @@ class RequestsController < ApplicationController
     @request = Request.new(:requester_id=>current_user.id, :user_id=> params[:user_id])
 	request_test = Request.count(:all, :conditions => ["user_id = ? and requester_id=?",params[:user_id], current_user.id])
 
-	puts "#####"
-	puts request_test
-	puts @request.requester_id
-	puts @request.user_id
 	
 	if @request.user_id != @request.requester_id && request_test == 0
 		respond_to do |format|

@@ -1,0 +1,12 @@
+{"requests":
+				[	
+					<% @requests.each do |request| %>
+					{
+						
+							"request_id":"<%= request.id %>",
+							"requester_id":"<%= request.requester_id %>"
+					},
+					<% end %>
+					
+				]
+}

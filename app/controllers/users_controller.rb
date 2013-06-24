@@ -60,7 +60,7 @@ class UsersController < ApplicationController
 	@users = User.all
 	respond_to do |format|
         format.html {@users}
-        format.json { render :json => @users }
+        format.json
 	end
   end
   
@@ -96,14 +96,14 @@ class UsersController < ApplicationController
     end
   end
   
-  def getrequests #MUST give the requester id
+  def getrequests
 	user = current_user
 	
 	if !user.nil?
-	requests = user.requests
+	@requests = user.requests
 		respond_to do |format|
-			format.html { requests }
-			format.json { render :json => requests }
+			format.html { @requests }
+			format.json
 		end
 	else
 		respond_to do |format|

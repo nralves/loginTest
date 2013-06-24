@@ -1,0 +1,21 @@
+{"users":
+				[	
+					<% @users.each do |user| %>
+					{
+						
+							"id":"<%= user.id %>",
+							"title":"<%= user.title %>",
+							"name":"<%= user.name %>",
+							<% if !current_user.friends.find_by_email(user.email).nil? %>
+							"email":"<%= user.email %>",
+							<% else %>
+							"email":"NA",
+							<% end %>
+							"organization":"<%= user.organization %>",
+							"homepage":"<%= user.homepage %>",
+							"photo":"<%= user.photo_url(:thumb).to_s %>"
+					},
+					<% end %>
+					
+				]
+}
