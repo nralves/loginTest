@@ -22,10 +22,10 @@ Nifty::Application.configure do
 		config.action_mailer.smtp_settings = {
 		:address => "smtp.live.com",
 		:port => "587",
-		:domain => "my_app_domain", #Example: blog.local
-		:authentication => :login,
-		:user_name => "wolf.kf_87@hotmail.com",
-		:password => "GDISSbenfica"
+		:domain => "my_app", #Example: blog.local
+		:authentication => :plain,
+		:user_name => "conference-buddy@live.com.pt",
+		:password => "logitech2013"
 	}
 
   # Print deprecation notices to the Rails logger

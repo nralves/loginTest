@@ -21,8 +21,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
-	@user.emails.build(:email => @user.email, :activation=> 1, :confirmed => false)
-	UserMailer.welcome_email(@user).deliver
+	
+	#Generate Token
+	o =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
+	@token  =  (0...50).map{ o[rand(o.length)] }.join
+	
+	@user.emails.build(:email => @user.email, :activation=> @token, :confirmed => false)
+	UserMailer.welcome_email(@user, @token).deliver
     if @user.save
       session[:user_id] = @user.id
 	  respond_to do |format|
