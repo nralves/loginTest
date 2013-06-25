@@ -27,11 +27,27 @@ Nifty::Application.configure do
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
-  config.action_mailer.delivery_method = :test
+  # config.action_mailer.delivery_method = :smtp
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
-end
+  
+  # SMTP configuration
+  #config.action_mailer.delivery_method = :sendmail
+
+# I do care if the mailer can't send
+config.action_mailer.raise_delivery_errors = true
+
+# Include your app's configuration here:
+config.action_mailer.smtp_settings = {
+:address => "smtp.live.com",
+:port => "465",
+:domain => "my_app_domain", #Example: blog.local
+:authentication => :plain,
+:user_name => "wolf.kf_87@hotmail.com",
+:password => "GDISSbenfica"
+}
+}

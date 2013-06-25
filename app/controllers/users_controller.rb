@@ -21,6 +21,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+	@user.emails.build(:email => @user.email, :activation=> 1, :confirmed => false)
+	UserMailer.welcome_email(@user).deliver
     if @user.save
       session[:user_id] = @user.id
 	  respond_to do |format|
@@ -169,4 +171,25 @@ class UsersController < ApplicationController
 		
 		end
   end
+  
+	  def confirm
+		record = current_user.emails.find_by_activation(params[:token])
+
+		
+		if !record.nil?
+			record.confirmed = true
+			record.activation = ""
+			record.save
+			
+			respond_to do |format|
+					format.html { redirect_to users_url, :notice => "Done" }
+					format.json { head :unauthorized }
+			end
+		else
+			respond_to do |format|
+					format.html { redirect_to users_url, :notice => "Not found" }
+					format.json { head :unauthorized }
+			end
+		end
+	end
 end

@@ -1,6 +1,7 @@
 Nifty::Application.routes.draw do
-  resources :tracks
+  resources :emails
 
+  resources :tracks
 
   resources :posters
 
@@ -46,6 +47,8 @@ Nifty::Application.routes.draw do
   match 'rejectrequest' => 'users#rejectrequest', :as => :rejectrequest
   
   match 'removefriend' => 'users#removefriend', :as => :removefriend
+  
+  match 'confirm/:token' => 'users#confirm', :as => :confirm
 
   resources :users 
 
