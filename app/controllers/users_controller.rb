@@ -65,6 +65,7 @@ class UsersController < ApplicationController
   
   def index
 	@users = User.all
+	@user_email = current_user.emails.find_by_email(current_user.email)
 	respond_to do |format|
         format.html {@users}
         format.json
@@ -101,6 +102,14 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json
     end
+  end
+  
+  def getcontacts
+	@contacts = current_user.friends
+	respond_to do |format|
+			format.html { @contacts }
+			format.json
+		end
   end
   
   def getrequests
@@ -196,5 +205,5 @@ class UsersController < ApplicationController
 					format.json { head :unauthorized }
 			end
 		end
-	end
+	end		
 end

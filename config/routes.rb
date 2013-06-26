@@ -49,9 +49,11 @@ Nifty::Application.routes.draw do
   match 'removefriend' => 'users#removefriend', :as => :removefriend
   
   match 'confirm/:token' => 'users#confirm', :as => :confirm
+  
+  match 'getcontacts' => 'users#getcontacts', :as => :getcontacts
 
-  resources :users 
-
+  resources :users
+  
   resources :sessions
   
   resources :conferences do
