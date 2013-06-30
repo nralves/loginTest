@@ -48,26 +48,25 @@
 								},
 														
 								"posters": {								
-									"Poster":  [
+									"poster":  [
 										<% block.posters.each do |poster| %>{
 													"id": "<%= poster.id %>",
 													"name": "<%= poster.name %>",
 													"description": "<%= poster.description %>",
 													"block_id": "<%= poster.block_id %>",
-													"votes": "<%= poster.votes %>",
 														
 												<% if poster.file? %>
-													"file_type": "<%= poster.file.file.extension.downcase %>",
+													"poster_info": "<%= poster.file.file.extension.downcase %>",
 													"size": "<%= poster.file.size %>",
 												<% else %>
-													"file_type": "no_file",
+													"poster_info": "no_file",
 												<% end %>
 												
 												<% if poster.poster? %>
-													"file_type": "<%= poster.poster.file.extension.downcase %>",
+													"poster_img": "<%= poster.poster.file.extension.downcase %>",
 													"size": "<%= poster.poster.size %>",
 												<% else %>
-													"file_type": "no_file",
+													"poster_img": "no_file",
 												<% end %>
 		
 												"lecturers": {
@@ -111,6 +110,7 @@
 										"homepage": "<%= lecturer.homepage %>",
 										"resume": "<%= lecturer.resume %>",
 										"image": "<%= lecturer.image_url(:thumb).to_s %>"
+										"user_id": "<%= lecturer.user_id %>"
 						},
 						<% end %>
 					]

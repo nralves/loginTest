@@ -1,7 +1,6 @@
 Nifty::Application.routes.draw do
   resources :participants
 
-
   resources :emails
 
   resources :tracks

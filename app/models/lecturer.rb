@@ -7,5 +7,5 @@ class Lecturer < ActiveRecord::Base
   
   accepts_nested_attributes_for :events, :posters
   
-  mount_uploader :image, AvatarUploader
+  mount_uploader :image, LecturerUploader
 end

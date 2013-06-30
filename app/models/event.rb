@@ -6,5 +6,5 @@ class Event < ActiveRecord::Base
   
     accepts_nested_attributes_for :lecturers
 	
-	mount_uploader :file, PdfUploader
+	mount_uploader :file, PaperUploader
 end
