@@ -41,9 +41,18 @@ class LecturersController < ApplicationController
   # POST /lecturers.json
   def create
     @lecturer = Lecturer.new(params[:lecturer])
+	
+	users = User.all
+	
+	users.each do |user|
+		if user.emails.find_by_email(user.email).confirmed && user.email == @lecturer.email
+			@lecturer.user_id = user.id
+		end
+	end
 
     respond_to do |format|
       if @lecturer.save
+	  
         format.html { redirect_to @lecturer, notice: 'Lecturer was successfully created.' }
         format.json { render json: @lecturer, status: :created, location: @lecturer }
       else

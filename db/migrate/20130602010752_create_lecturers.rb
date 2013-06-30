@@ -8,6 +8,8 @@ class CreateLecturers < ActiveRecord::Migration
       t.string :homepage
       t.string :resume
       t.string :photo
+	  t.string :email
+	  t.integer :user_id
 
       t.timestamps
     end

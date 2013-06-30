@@ -4,6 +4,7 @@ class Conference < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :blocks, :dependent => :destroy
   has_many :news, :dependent => :destroy
+  has_many :participants, :dependent => :destroy
   
   accepts_nested_attributes_for :users
   mount_uploader :logo, AvatarUploader
@@ -44,8 +45,24 @@ class Conference < ActiveRecord::Base
 			c.begin = row[1]
 			c.end = row[2]
 			c.location = row[3]
-			c.logo = File.open("CSVs/resources/" + row[4])#
+			c.logo = row[4]#File.open("CSVs/resources/" + row[4])#
 			c.save
+		end
+		
+	############################
+	## Adicionar participants #
+	############################
+	# Step 1: convert the uploaded file object to a file name
+	file_name = "CSVs/participants.txt"
+	# Step 2: To get the input text and see if it's what you expect
+	csv_file = File.read(file_name, {encoding: 'UTF-8'})
+	
+		csv = CSV.parse(csv_file, :headers => true)
+		csv.each do |row|
+			participant = Participant.new
+			participant.email = row[0]
+			participant.conference_id = c.id
+			participant.save
 		end
 	
 		
@@ -83,7 +100,7 @@ class Conference < ActiveRecord::Base
 		end
 		
 		
-		######################
+	######################
 	## Adicionar Posters #
 	######################
 	p_hash = {}
@@ -126,7 +143,8 @@ class Conference < ActiveRecord::Base
 			l.country = row[3]
 			l.homepage = row[4]
 			l.resume = row[5]
-			l.image = File.open("CSVs/resources/lecturers/"+row[6])
+			l.image = row[6]#File.open("CSVs/resources/lecturers/"+row[6])
+			l.email = row[7]
 			l.save
 			l_hash[l.name] = l.id
 		end

@@ -1,4 +1,7 @@
 Nifty::Application.routes.draw do
+  resources :participants
+
+
   resources :emails
 
   resources :tracks
@@ -60,6 +63,8 @@ Nifty::Application.routes.draw do
 	collection { post :import }
 	collection { post :addUser }
 	collection { post :removeUser }
+	collection { post :addParticipant }
+	collection { post :removeParticipant }
 end
   
   resources :news

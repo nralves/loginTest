@@ -84,11 +84,24 @@ class ConferencesController < ApplicationController
   
   def conferencedownload
   @conference = Conference.find(params[:id])
+  
+  participants = @conference.participants
+  
+  if !participants.nil? && !current_user.nil?
+	participants.each do |participant|
+		if participant.email == current_user.email && current_user.emails.find_by_email(current_user.email).confirmed
+			userTest = @conference.users.find_by_email(params[current_user.email])
+			if userTest.nil?
+				@conference.users << current_user
+			end
+		end
+	end
+	end
+  
   @lecturersArray = Array.new
 		 respond_to do |format|
 		  format.html { redirect_to conferences_url }
 		  format.json 
-			#{ render :json => @conference.to_json(:include => { :events => {:include => {:lecturers => {:only => :name}}, :only => :name }}, :only => :name)}
 					  
 		 end
   end
@@ -119,7 +132,7 @@ class ConferencesController < ApplicationController
 	userTest = conference.users.find_by_email(params[:email])
 	if userTest.nil?
 		conference.users << User.find_by_email(params[:email])
-		redirect_to conferences_url, notice: 'User Addad'
+		redirect_to conferences_url, notice: 'User Added'
 	else
 		redirect_to conferences_url, notice: 'Cant add the same User twice'
 	end
@@ -132,7 +145,32 @@ class ConferencesController < ApplicationController
 	conference.users.delete(user)
 	redirect_to conferences_url, notice: 'User removed'
 	else
-		redirect_to conferences_url, notice: 'Cant remove a non-addad user'
+		redirect_to conferences_url, notice: 'Cant remove a non-added user'
+	end
+  end
+  
+  
+    
+  def addParticipant
+	conference = Conference.find(params[:id])
+	participantTest = conference.participants.find_by_email(params[:email])
+	if participantTest.nil?
+		participant= Participant.new(:email => params[:email])
+		conference.participants << participant
+		redirect_to conferences_url, notice: 'Participant Added'
+	else
+		redirect_to conferences_url, notice: 'Cant add the same Participant twice'
+	end
+  end
+  
+  def removeParticipant
+	conference = Conference.find(params[:id])
+	participant = conference.participants.find_by_email(params[:email])
+	if !participant.nil?
+	conference.participants.delete(participant)
+	redirect_to conferences_url, notice: 'Participant removed'
+	else
+		redirect_to conferences_url, notice: 'Cant remove a non-added participant'
 	end
   end
   

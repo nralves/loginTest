@@ -16,6 +16,7 @@
     <th>Logo</th>
 	<th>ID</th>
 	<th>Users Associated</th>
+	<th>Participants</th>
   </tr>
 
 <% @conferences.each do |conference| %>
@@ -30,7 +31,13 @@
 	<% conference.users.each do |user| %>
 			<div>
 				<%= user.name %><br /><br />
-				<%= user.id %><br /><br />
+			</div>
+		<% end %>
+	</td>
+	<td>
+	<% conference.participants.each do |participant| %>
+			<div>
+				<%= participant.email %><br /><hr />
 			</div>
 		<% end %>
 	</td>
@@ -41,7 +48,7 @@
 <% end %>
 </table>
 
-<h2>Import Products</h2>
+<h2>Import Conference</h2>
 
 <%= form_tag import_conferences_path, multipart: true do %>
   <%= file_field_tag :file %><br /><br />

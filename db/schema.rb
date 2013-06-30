@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625011118) do
+ActiveRecord::Schema.define(:version => 20130626220635) do
 
   create_table "blocks", :force => true do |t|
     t.string   "name"
@@ -77,6 +77,8 @@ ActiveRecord::Schema.define(:version => 20130625011118) do
     t.string   "homepage"
     t.string   "resume"
     t.string   "photo"
+    t.string   "email"
+    t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "image"
@@ -93,6 +95,13 @@ ActiveRecord::Schema.define(:version => 20130625011118) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "conference_id"
+  end
+
+  create_table "participants", :force => true do |t|
+    t.string   "email"
+    t.integer  "conference_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "posters", :force => true do |t|

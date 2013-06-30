@@ -47,7 +47,6 @@ class UsersController < ApplicationController
   end
 
   def update
-	params[:user][:conferences_ids] ||= []  
     @user = current_user
     if @user.update_attributes(params[:user])
 	  respond_to do |format|

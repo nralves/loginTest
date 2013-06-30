@@ -6,23 +6,27 @@
 <table>
   <tr>
     <th>Name</th>
+	<th>Photo</th>
+	<th>User</th>
+	<th>Email</th>
     <th>Title</th>
     <th>Organization</th>
     <th>Country</th>
     <th>Homepage</th>
     <th>Resume</th>
-    <th>Photo</th>
   </tr>
 
 <% @lecturers.each do |lecturer| %>
   <tr>
     <td><%= lecturer.name %></td>
+	<td><%= image_tag lecturer.image_url(:thumb).to_s %> </td>
+	<td><%= lecturer.user_id %></td>
+	<td><%= lecturer.email %>
     <td><%= lecturer.title %></td>
     <td><%= lecturer.organization %></td>
     <td><%= lecturer.country %></td>
     <td><%= lecturer.homepage %></td>
     <td><%= lecturer.resume %></td>
-    <td><%= image_tag lecturer.image_url(:thumb).to_s %> </td>
     <td><%= link_to 'Show', lecturer %></td>
     <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
     <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
