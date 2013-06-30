@@ -10,13 +10,14 @@
 
 user1 =
 User.create(
-			{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: 'me.jpg'}
+			{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: File.open(Rails.root.join('/CSVs/resources/nuno.png'))}
+			#{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: 'nuno.png'}
 )
 			
 user2 =
 User.create(
-
-{email:'joaquim@gmail.com', password:'1234', title:'', name:'Joaquim Gonzalez', organization:'Catalunha', homepage:'joaquim.cat.es', photo: 'me.jpg'}
+			{email:'joaquim@gmail.com', password:'1234', title:'', name:'Joaquim Gonzalez', organization:'Catalunha', homepage:'joaquim.cat.es', photo: File.open(Rails.root.join('/CSVs/resources/potter.jpg'))}
+			#{email:'joaquim@gmail.com', password:'1234', title:'', name:'Joaquim Gonzalez', organization:'Catalunha', homepage:'joaquim.cat.es', photo: 'me.jpg'}
 
 )
 
