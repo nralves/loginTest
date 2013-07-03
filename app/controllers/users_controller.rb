@@ -204,5 +204,16 @@ class UsersController < ApplicationController
 					format.json { head :unauthorized }
 			end
 		end
-	end		
+	end	
+
+	def getusers
+	
+	@users = User.all
+	
+	respond_to do |format|
+					format.html { @users }
+					format.json
+			end
+	end
+		
 end

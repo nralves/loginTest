@@ -61,6 +61,8 @@ Nifty::Application.routes.draw do
   match 'edittheposter' => 'posters#edittheposter', :as => :edittheposter
   
   match 'updatetheposter' => 'posters#updatetheposter', :as => :updatetheposter
+  
+  match 'getusers' => 'users#getusers', :as => :getusers
 
   resources :users
   

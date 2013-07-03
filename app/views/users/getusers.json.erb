@@ -1,0 +1,15 @@
+{"users":
+				[	
+					<% @users.each do |user| %>
+					{
+						
+							"id":"<%= user.id %>",
+							"title":"<%= user.title %>",
+							"name":"<%= user.name %>",
+							"organization":"<%= user.title %>",
+							"photo":"<%= user.title %>"	
+					},
+					<% end %>
+					
+				]
+}
