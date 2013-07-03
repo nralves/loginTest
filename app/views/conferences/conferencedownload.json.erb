@@ -29,7 +29,7 @@
 														"file_type": "<%= event.file.file.extension.downcase %>",
 														"size": "<%= event.file.size %>",
 														<% else %>
-														"file": "no_file",
+														"file_type": "no_file",
 														<% end %>
 																				
 											"lecturers": {
@@ -109,7 +109,7 @@
 										"country": "<%= lecturer.country %>",
 										"homepage": "<%= lecturer.homepage %>",
 										"resume": "<%= lecturer.resume %>",
-										"image": "<%= lecturer.image_url(:thumb).to_s %>"
+										"image": "<%= lecturer.image_url(:thumb).to_s %>",
 										"user_id": "<%= lecturer.user_id %>"
 						},
 						<% end %>

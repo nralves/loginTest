@@ -53,6 +53,14 @@ Nifty::Application.routes.draw do
   match 'confirm/:token' => 'users#confirm', :as => :confirm
   
   match 'getcontacts' => 'users#getcontacts', :as => :getcontacts
+  
+  match 'isparticipant' => 'conferences#isparticipant', :as => :isparticipant
+  
+  match 'theposter' => 'posters#theposter', :as => :theposter
+  
+  match 'edittheposter' => 'posters#edittheposter', :as => :edittheposter
+  
+  match 'updatetheposter' => 'posters#updatetheposter', :as => :updatetheposter
 
   resources :users
   

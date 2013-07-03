@@ -5,7 +5,7 @@
     <th>User</th>
     <th>Requester</th>
     <th>ID</th>
-    <th></th>
+    <th>date</th>
     <th></th>
   </tr>
 
@@ -14,6 +14,7 @@
     <td><%= request.user_id %></td>
     <td><%= request.requester_id %></td>
 	<td><%= request.id %></td>
+	<td><%= request.created_at %></td>
     <td><%= link_to 'Show', request %></td>
     <td><%= link_to 'Edit', edit_request_path(request) %></td>
     <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>

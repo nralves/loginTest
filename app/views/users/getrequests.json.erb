@@ -4,7 +4,11 @@
 					{
 						
 							"request_id":"<%= request.id %>",
-							"requester_id":"<%= request.requester_id %>"
+							"requester_id":"<%= request.requester_id %>",
+							<% user = User.find(request.requester_id) %>
+							"requester_name":"<%= user.name %>",
+							"date":"<%= request.updated_at %>"
+							
 					},
 					<% end %>
 					

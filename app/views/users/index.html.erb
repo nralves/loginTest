@@ -19,7 +19,7 @@
 	<th>organization</th>
 	<th>homepage</th>
 	<th>photo</th>
-    <th></th>
+    <th>ID</th>
     <th></th>
     <th></th>
   </tr>
@@ -32,6 +32,7 @@
 	<td><%= user.organization %></td>
 	<td><%= user.homepage %></td>
 	<td><%= image_tag user.photo_url(:thumb).to_s %> </td>
+	<td><%= user.id %> </td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

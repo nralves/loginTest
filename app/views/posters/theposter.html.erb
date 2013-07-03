@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @poster.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @poster.description %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @poster.file %>
+</p>
+
+<p>
+  <b>Block:</b>
+  <%= @poster.block.name %>
+</p>
+
+<p>
+  <b>Conference:</b>
+  <%= @poster.block.conference.name %>
+</p>
+
+
+<%= link_to "Edit", :controller => :posters, :action=> :edittheposter, :id=> @poster.id %> |
+<%= link_to 'Back', root_url %>

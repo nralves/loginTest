@@ -196,7 +196,7 @@ class UsersController < ApplicationController
 			
 			respond_to do |format|
 					format.html { redirect_to users_url, :notice => "Done" }
-					format.json { head :unauthorized }
+					format.json { head :ok }
 			end
 		else
 			respond_to do |format|

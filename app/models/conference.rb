@@ -45,7 +45,7 @@ class Conference < ActiveRecord::Base
 			c.begin = row[1]
 			c.end = row[2]
 			c.location = row[3]
-			c.logo = File.open("CSVs/resources/" + row[4])#row[4]#
+			c.logo = row[4]#File.open("CSVs/resources/" + row[4])#
 			c.save
 		end
 		
@@ -143,7 +143,7 @@ class Conference < ActiveRecord::Base
 			l.country = row[3]
 			l.homepage = row[4]
 			l.resume = row[5]
-			l.image = File.open("CSVs/resources/lecturers/"+row[6])#row[6]#
+			l.image = row[6]#File.open("CSVs/resources/lecturers/"+row[6])#
 			l.email = row[7]
 			l.save
 			l_hash[l.name] = l.id

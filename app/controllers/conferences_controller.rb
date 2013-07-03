@@ -86,13 +86,21 @@ class ConferencesController < ApplicationController
   @conference = Conference.find(params[:id])
   
   participants = @conference.participants
-  
+
   if !participants.nil? && !current_user.nil?
+    
 	participants.each do |participant|
 		if participant.email == current_user.email && current_user.emails.find_by_email(current_user.email).confirmed
-			userTest = @conference.users.find_by_email(params[current_user.email])
+			userTest = @conference.users.find(current_user.id)
 			if userTest.nil?
 				@conference.users << current_user
+			end
+			
+			lecturers = Lecturer.find(:all, :conditions => { :user_id => nil })
+			lecturers.each do |lecturer|
+				if lecturer.email == current_user.email && current_user.emails.find_by_email(current_user.email).confirmed
+					lecturer.update_attributes(:user_id => current_user.id)
+				end
 			end
 		end
 	end
@@ -174,5 +182,24 @@ class ConferencesController < ApplicationController
 	end
   end
   
+  def isparticipant
+	conference = Conference.find(params[:id])
+	
+	if !current_user.nil?
+		userTest = conference.users.find_by_id(current_user.id)
+	end
+	
+	if !userTest.nil?
+		respond_to do |format|
+		  format.html { redirect_to conferences_url, notice: 'true' }
+		  format.json {	render :text => "true" }
+		end
+	else
+		respond_to do |format|
+		  format.html { redirect_to conferences_url, notice: 'false' }
+		  format.json {	render :text => "false" }
+		end
+	end
+  end
   
 end

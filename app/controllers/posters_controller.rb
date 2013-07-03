@@ -20,6 +20,38 @@ class PostersController < ApplicationController
       format.json { render json: @poster }
     end
   end
+  
+  def theposter
+    @poster = Poster.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @poster }
+    end
+  end
+  
+  def edittheposter
+    @poster = Poster.find(params[:id])
+	@blocks = Block.all
+	@lecturers = Lecturer.all
+  end
+  
+  def updatetheposter
+    @poster = Poster.find(params[:id])
+	@blocks = Block.all
+	@lecturers = Lecturer.all
+
+    respond_to do |format|
+      if @poster.update_attributes(params[:poster])
+        format.html { render action: "theposter", :id=> @poster.id, notice: 'Poster was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { head :bad_request }
+        format.json { render json: @poster.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
 
   # GET /posters/new
   # GET /posters/new.json
