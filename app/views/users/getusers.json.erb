@@ -6,8 +6,8 @@
 							"id":"<%= user.id %>",
 							"title":"<%= user.title %>",
 							"name":"<%= user.name %>",
-							"organization":"<%= user.title %>",
-							"photo":"<%= user.title %>"	
+							"organization":"<%= user.organization %>",
+							"photo":"<%= user.photo_url(:thumb).to_s %>"	
 					},
 					<% end %>
 					
