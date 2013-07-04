@@ -90,4 +90,24 @@ class LecturersController < ApplicationController
     end
   end
   
+  def getlecturers
+	if request.post?
+		date = params[:date]
+		id = params[:id]
+		#@lecturers = Lecturer.where("updated_at >= \"#{date}\" and conference_id = \"#{id}\"")
+		@lecturers = Lecturer.where("lecturers.updated_at >= \"#{date}\"").joins("INNER JOIN posters").joins("INNER JOIN events").joins("INNER JOIN blocks ON blocks.conference_id= \"#{id}\"").group("lecturers.id")
+
+		respond_to do |format|
+		  format.html {redirect_to lecturers_url}
+		  format.json #{ render json:  @news.to_json(:only => ["title","body","updated_at", "conference_id"])}
+		end
+	else
+		respond_to do |format|
+		  format.html {redirect_to root_url}
+		  format.json { render json: "Bad Request", status: :bad_request }
+		end
+	end
+  
+  end
+  
 end

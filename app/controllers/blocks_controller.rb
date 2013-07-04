@@ -88,4 +88,24 @@ class BlocksController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def getblocks
+	if request.post?
+		date = params[:date]
+		id = params[:id]
+		@blocks = Block.where("updated_at >= \"#{date}\" and conference_id = \"#{id}\"").group("blocks.id")
+
+		respond_to do |format|
+		  format.html {redirect_to blocks_url}
+		  format.json #{ render json:  @news.to_json(:only => ["title","body","updated_at", "conference_id"])}
+		end
+	else
+		respond_to do |format|
+		  format.html {redirect_to root_url}
+		  format.json { render json: "Bad Request", status: :bad_request }
+		end
+	end
+  
+  end
+  
 end

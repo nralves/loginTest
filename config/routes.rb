@@ -18,7 +18,7 @@ Nifty::Application.routes.draw do
 
   match 'signup' => 'users#new', :as => :signup
   
-  match 'test' => 'users#test', :as => :test
+  match 'test' => 'users#test', :as => :home
 
   match 'logout' => 'sessions#destroy', :as => :logout
 
@@ -27,6 +27,12 @@ Nifty::Application.routes.draw do
   match 'newscheck' => 'news#checkDate', :as => :newscheck
   
   match 'getnews' => 'news#getnews', :as => :getnews
+  
+  match 'getposters' => 'posters#getposters', :as => :getposters
+  
+  match 'getblocks' => 'blocks#getblocks', :as => :getblocks
+  
+  match 'getlecturers' => 'lecturers#getlecturers', :as => :getlecturers
   
   match 'conferencedownload' => 'conferences#conferencedownload', :as => :conferencedownload
   

@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   def test
 	if logged_in?
 		respond_to do |format|
-			format.html {render :action => 'test' }
+			format.html {render :action => 'home' }
 			format.json { render :text => "{Accepted}", :status => 200 }
 		end
 	else
 		respond_to do |format|
-			format.html {render :action => 'test' }
+			format.html {render :action => 'home' }
 			format.json { render :text => "{Please login}", :status => 200 }
 		end
 	end
@@ -64,7 +64,6 @@ class UsersController < ApplicationController
   
   def index
 	@users = User.all
-	@user_email = current_user.emails.find_by_email(current_user.email)
 	respond_to do |format|
         format.html {@users}
         format.json

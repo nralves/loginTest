@@ -1,0 +1,25 @@
+{
+"posters": [
+					<% @posters.each do |poster| %>
+					{
+						"id": "<%= poster.id %>",
+						"name": "<%= poster.name %>",
+						"description": "<%= poster.description %>",
+														
+						<% if poster.file? %>
+							"poster_info": "<%= poster.file.file.extension.downcase %>",
+							"size": "<%= poster.file.size %>",
+						<% else %>
+							"poster_info": "no_file",
+						<% end %>
+												
+						<% if poster.poster? %>
+							"poster_img": "<%= poster.poster.file.extension.downcase %>",
+							"size": "<%= poster.poster.size %>",
+						<% else %>
+							"poster_img": "no_file",
+						<% end %>
+					},
+					<% end %>
+			]
+}

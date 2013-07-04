@@ -163,7 +163,7 @@ blockquote{
 #wrap {
        margin-left: auto;
        margin-right: auto;
-       width: 80%;
+       width: 86%;
 }
 
 
@@ -187,10 +187,22 @@ blockquote{
 	float: left;
 }
 
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.image a:hover{
+    color: transparent;
+    background-color: transparent;
+}
+
 #top h2 {
 	color: White;
 	letter-spacing: 3px;
-	font-size: 2.4em;
+	font-size: 2.1em;
 	font-weight: normal;
 	position: relative;
 	margin: 0px;

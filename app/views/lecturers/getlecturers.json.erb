@@ -1,0 +1,18 @@
+{"lecturers":
+				[	
+					<% @lecturers.each do |lecturer| %>
+					{
+						
+							"lecturer_id":"<%= lecturer.id %>",
+							"name":"<%= lecturer.name %>",
+							"title":"<%= lecturer.title %>",
+							"organization":"<%= lecturer.organization %>",
+							"country":"<%= lecturer.country %>",
+							"homepage":"<%= lecturer.homepage %>",
+							"resume":"<%= lecturer.resume %>"
+							
+					},
+					<% end %>
+					
+				]
+}

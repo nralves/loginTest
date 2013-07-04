@@ -1,5 +1,6 @@
 body {
-  background-color: #fff;
+  background: url(top_bg.gif) repeat-x;
+  background-color: #A9D0F5;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -20,12 +21,12 @@ pre {
 
 a {
   color: #000;
+   text-decoration: none;
   &:visited {
     color: #666;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
   }
 }
 

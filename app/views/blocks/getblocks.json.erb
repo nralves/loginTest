@@ -1,0 +1,16 @@
+{
+"blocks": [
+					<% @blocks.each do |block| %>
+					{
+						"block_id": "<%= block.id %>",
+						"name": "<%= block.name %>",
+						"room": "<%= block.room %>",
+						"begin": "<%= block.begin %>",
+						<% if !block.track.nil? %>
+							"track": "<%= block.track.name %>",
+						<% end %>
+						"end": "<%= block.end %>"
+					},
+					<% end %>
+			]
+}

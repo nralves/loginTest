@@ -91,7 +91,7 @@ class ConferencesController < ApplicationController
     
 	participants.each do |participant|
 		if participant.email == current_user.email && current_user.emails.find_by_email(current_user.email).confirmed
-			userTest = @conference.users.find(current_user.id)
+			userTest = @conference.users.where(:id => current_user.id).first
 			if userTest.nil?
 				@conference.users << current_user
 			end

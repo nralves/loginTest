@@ -159,4 +159,29 @@ class PostersController < ApplicationController
     end
 	
   end
+  
+  
+  
+  def getposters
+	if request.post?
+		date = params[:date]
+		id = params[:id]
+		#@posters = Poster.where("updated_at >= \"#{date}\" and conference_id = \"#{}\"")
+		@posters = Poster.where("posters.updated_at >= \"#{date}\"").joins("INNER JOIN blocks ON blocks.conference_id= \"#{id}\"").group("posters.id")
+
+		respond_to do |format|
+		  format.html {redirect_to posters_url}
+		  format.json #{ render json:  @news.to_json(:only => ["title","body","updated_at", "conference_id"])}
+		end
+	else
+		respond_to do |format|
+		  format.html {redirect_to root_url}
+		  format.json { render json: "Bad Request", status: :bad_request }
+		end
+	end
+  
+  end
+  
+  
+  
 end
