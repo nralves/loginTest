@@ -4,28 +4,28 @@ Fernando Birra,Assistant Professor,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fp
 Manuel Próspero dos Santos,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,"Professor Doutorado em Computer Graphics Modelling e investigador em Computação Gráfica na FCT/UNL.",mps.jpg,mps@unl.pt
 José Luís Encarnação,Prof.,Universidade Técnica de Darmstadt,Portugal,jle.utd.com,"De 1987 a 2006 José Luís Encarnação foi o director fundador do instituto Fraunhofer de Computação Gráfica IGD em Darmstadt. Deade 1975, é professor titular de Ciência da Computação na universidade Técnica de Darmstadt e dirige o Interactive Graphics Research Group (GRIS). Desde Outubro de 2009, é Professor Emérito da Universidade Técnica de Darmstadt. Co-fundou a EUROGRAPHICS, estabeleceu a INI-GraphicsNet, promoveu activamente a criação de várias empresas, foi autor/co-autor de inúmeros livros e artigos e recebeu diversos prémios e distinções",jle.jpg,jle@gris.tu-darmstadt.de
 Verónica Orvalho,Prof.ª,Universidade do Porto,Portugal,http://www.dcc.fc.up.pt/~veronica.orvalho/,"Doutorou-se em Desenvolvimento de Software (Computação Gráfica) pela Universidade Politécnica de Catalunya (2007), onde fez investigação em 'Facial Animation for CG Films and VideoGames'. Desde 1994 tem trabalhado em empresas como a IBM, Ericsson e Patagonik Film Argentina. É professora em tempo integral na Universidade do Porto, chefia o 'Porto INteractive Center and Computer Graphics group', e é fundadora e CTO da ''Face in Motion'",vo.jpg,veronica.orvalho@dcc.fc.up.pt
-Pedro Ribeiro,,,Portugal,,,photo.jpg,random_mail1@rand.com
-Ido Iurgel,,,Portugal,,,photo.jpg,random_mail2@rand.com
-Nuno Cardoso,,,Portugal,,,photo.jpg,random_mail3@rand.com
-Fábio Rocha,,,Portugal,,,photo.jpg,random_mail4@rand.com
-Pedro Miguel Moreira,,,Portugal,,,photo.jpg,random_mail5@rand.com
-João Fonseca,,,Portugal,,,photo.jpg,random_mail6@rand.com
-Gilberto Felgueiras,,,Portugal,,,photo.jpg,random_mail7@rand.com
-Madalena Ribeiro,,,Portugal,,,photo.jpg,random_mail8@rand.com
-Abel Gomes,,,Portugal,,,photo.jpg,random_mail9@rand.com
-João Ferreira Nunes,,,Portugal,,,photo.jpg,random_mail10@rand.com
-João Manuel R. S. Tavares,,,Portugal,,,photo.jpg,random_mail11@rand.com
-Bruno Preto,,,Portugal,,,photo.jpg,random_mail12@rand.com
-Pedro Medeiros,,,Portugal,,,photo.jpg,random_mail13@rand.com
-Maria Beatriz Carmo,,,Portugal,,,photo.jpg,random_mail14@rand.com
-Waldir Pimenta,,,Portugal,,,photo.jpg,random_mail15@rand.com
-Carlos Campos,,,Portugal,,,photo.jpg,random_mail16@rand.com
-João Miguel Leitão,,,Portugal,,,photo.jpg,random_mail17@rand.com
-António Coelho,,,Portugal,,,photo.jpg,random_mail1@8rand.com
-Raquel Costa,,,Portugal,,,photo.jpg,random_mail1@9rand.com
-Manuel J. Fonseca,,,Portugal,,,photo.jpg,random_mail20@rand.com
-Alferedo Ferreira,,,Portugal,,,photo.jpg,random_mail21@rand.com
-Nuno Rodrigues,,,Portugal,,,photo.jpg,random_mail22@rand.com
+Pedro Ribeiro,Prof.,,Portugal,,,photo.jpg,random_mail1@rand.com
+Ido Iurgel,Prof.,,Portugal,,,photo.jpg,random_mail2@rand.com
+Nuno Cardoso,Prof.,,Portugal,,,photo.jpg,random_mail3@rand.com
+Fábio Rocha,Prof.,,Portugal,,,photo.jpg,random_mail4@rand.com
+Pedro Miguel Moreira,Prof.,,Portugal,,,photo.jpg,random_mail5@rand.com
+João Fonseca,Prof.,,Portugal,,,photo.jpg,random_mail6@rand.com
+Gilberto Felgueiras,Prof.,,Portugal,,,photo.jpg,random_mail7@rand.com
+Madalena Ribeiro,Prof.,,Portugal,,,photo.jpg,random_mail8@rand.com
+Abel Gomes,Prof.,,Portugal,,,photo.jpg,random_mail9@rand.com
+João Ferreira Nunes,Prof.,,Portugal,,,photo.jpg,random_mail10@rand.com
+João Manuel R. S. Tavares,Prof.,,Portugal,,,photo.jpg,random_mail11@rand.com
+Bruno Preto,Prof.,,Portugal,,,photo.jpg,random_mail12@rand.com
+Pedro Medeiros,Prof.,,Portugal,,,pm.jpg,pm@fct.unl.pt
+Maria Beatriz Carmo,Prof.,,Portugal,,,photo.jpg,random_mail14@rand.com
+Waldir Pimenta,Prof.,,Portugal,,,photo.jpg,random_mail15@rand.com
+Carlos Campos,Prof.,,Portugal,,,photo.jpg,random_mail16@rand.com
+João Miguel Leitão,Prof.,,Portugal,,,photo.jpg,random_mail17@rand.com
+António Coelho,Prof.,,Portugal,,,photo.jpg,random_mail1@8rand.com
+Raquel Costa,Prof.,,Portugal,,,photo.jpg,random_mail1@9rand.com
+Manuel J. Fonseca,Prof.,,Portugal,,,photo.jpg,random_mail20@rand.com
+Alferedo Ferreira,Prof.,,Portugal,,,photo.jpg,random_mail21@rand.com
+Nuno Rodrigues,Prof.,,Portugal,,,photo.jpg,random_mail22@rand.com
 Abílio Costa,Prof.,,,,,photo.jpg,random_mail23@rand.com
 Pedro Leitão,Prof.,,,,,photo.jpg,random_mail23@rand.com
 Igor Duarte Cardoso,Prof.,,,,,photo.jpg,random_mail25@rand.com
@@ -37,6 +37,6 @@ João Manuel Brisson Lopes,Prof.,,,,,photo.jpg,random_mail30@rand.com
 Vasco Costa,Prof.,,,,,photo.jpg,random_mail31@rand.com
 Gustavo Maçães,Prof.,,,,,photo.jpg,random_mail32@rand.com
 Nuno Silva,Prof.,,,,,photo.jpg,random_mail33@rand.com
-Nuno Alves,Student,,,,,photo.jpg,nralves@campus.fct.unl.pt
-João Ribeiro,Student,,,,,photo.jpg,jribeiro@gmail.com
-Filipe Correia,Student,,,,,photo.jpg,filipe@campus.fct.unl.pt.com
+Nuno Alves,Student,FCT/UNL,Portugal,nralves.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,nralves@campus.fct.unl.pt
+João Ribeiro,Student,FCT/UNL,Portugal,jribeiro.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,jribeiro@gmail.com
+Filipe Correia,Student,FCT/UNLS,Portugal,fcorreia.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,filipe@campus.fct.unl.pt.com

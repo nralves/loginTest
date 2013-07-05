@@ -14,39 +14,39 @@
 
 user1 =
 User.create(
-			#{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: File.open(Rails.root.join('CSVs/resources/users/nuno.jpg'))}
-			{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: 'nuno.jpg'}
+			{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: File.open(Rails.root.join('CSVs/resources/users/nuno.jpg'))}
+			#{email:'nralves@campus.fct.unl.pt', password:'1234', title:'', name:'Nuno Alves', organization:'FCT-UNL', homepage:'nuno.fct.unl.pt', photo: 'nuno.jpg'}
 )
 			
 user2 =
 User.create(
-			#{email:'jribeiro@gmail.com', password:'1234', title:'Std.', name:'Joao Ribeiro', organization:'FCT/UNL', homepage:'jrib.fct.pt', photo: File.open(Rails.root.join('CSVs/resources/users/potter.png'))}
-			{email:'jribeiro@gmail.com', password:'1234', title:'Std.', name:'Joao Ribeiro', organization:'FCT/UNL', homepage:'jrib.fct.pt', photo: 'me.jpg'}
+			{email:'jribeiro@gmail.com', password:'1234', title:'Std.', name:'Joao Ribeiro', organization:'FCT/UNL', homepage:'jrib.fct.pt', photo: File.open(Rails.root.join('CSVs/resources/users/potter.png'))}
+			#{email:'jribeiro@gmail.com', password:'1234', title:'Std.', name:'Joao Ribeiro', organization:'FCT/UNL', homepage:'jrib.fct.pt', photo: 'me.jpg'}
 
 )
 
 user3 =
 User.create(
-			#{email:'maria_albertina@hotmail.com', password:'1234', title:'', name:'Maria Albertina', organization:'NSA', homepage:'ma.nsa.com', photo: File.open(Rails.root.join('CSVs/resources/users/maria-albertina.jpg'))}
-			{email:'maria_albertina@hotmail.com', password:'1234', title:'', name:'Maria Albertina', organization:'NSA', homepage:'ma.nsa.com', photo: 'me.jpg'}
+			{email:'maria_albertina@hotmail.com', password:'1234', title:'', name:'Maria Albertina', organization:'NSA', homepage:'ma.nsa.com', photo: File.open(Rails.root.join('CSVs/resources/users/maria-albertina.jpg'))}
+			#{email:'maria_albertina@hotmail.com', password:'1234', title:'', name:'Maria Albertina', organization:'NSA', homepage:'ma.nsa.com', photo: 'me.jpg'}
 )
 
 user4 =
 User.create(
-			#{email:'a@a.com', password:'1234', title:'Mr.', name:'Ae', organization:'A Ltd.', homepage:'ae.a.com', photo: File.open(Rails.root.join('CSVs/resources/users/rpg.jpg'))}
-			{email:'a@a.com', password:'1234', title:'Mr.', name:'ridiculously photogenic guy', organization:'A Ltd.', homepage:'ae.a.com', photo: 'me.jpg'}
+			{email:'a@a.com', password:'1234', title:'Mr.', name:'Ae', organization:'A Ltd.', homepage:'ae.a.com', photo: File.open(Rails.root.join('CSVs/resources/users/rpg.jpg'))}
+			#{email:'a@a.com', password:'1234', title:'Mr.', name:'ridiculously photogenic guy', organization:'A Ltd.', homepage:'ae.a.com', photo: 'me.jpg'}
 )
 
 user5 =
 User.create(
-			#{email:'filipe@campus.fct.unl.pt.com', password:'1234', title:'Std.', name:'Filipe', organization:'FCT/UNL', homepage:'filipe.fct.com', photo: File.open(Rails.root.join('CSVs/resources/users/filipe.png'))}
-			 {email:'filipe@campus.fct.unl.pt.com', password:'1234', title:'Std.', name:'Filipe', organization:'FCT/UNL', homepage:'filipe.fct.com', photo: 'me.jpg'}
+			{email:'filipe@campus.fct.unl.pt.com', password:'1234', title:'Std.', name:'Filipe', organization:'FCT/UNL', homepage:'filipe.fct.com', photo: File.open(Rails.root.join('CSVs/resources/users/filipe.png'))}
+			#{email:'filipe@campus.fct.unl.pt.com', password:'1234', title:'Std.', name:'Filipe', organization:'FCT/UNL', homepage:'filipe.fct.com', photo: 'me.jpg'}
 )
 
 user6 =
 User.create(
-			#{email:'rapouso.foxhound.com', password:'1234', title:'Std.', name:'Luigi Fox', organization:'NSA', homepage:'ra.nsa.com', photo: File.open(Rails.root.join('CSVs/resources/users/god.png'))}
-			 {email:'admin@cb.com', password:'1234', title:'Almighty', name:'Administrator', organization:'Conference Buddy', homepage:'super.admin_homepage.com', photo: 'me.jpg'}
+			{email:'rapouso.foxhound.com', password:'1234', title:'Std.', name:'Luigi Fox', organization:'NSA', homepage:'ra.nsa.com', photo: File.open(Rails.root.join('CSVs/resources/users/god.png'))}
+			#{email:'admin@cb.com', password:'1234', title:'Almighty', name:'Administrator', organization:'Conference Buddy', homepage:'super.admin_homepage.com', photo: 'me.jpg'}
 )
 
 #Contacts creation
