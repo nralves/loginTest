@@ -9,7 +9,7 @@
 #encoding: utf-8 
 
 
-	Conference.create({name:'Inforum 2013', begin:'21-09-2013 09:00', end:'24-09-2013 23:00', location:'Orlando,Florida', logo: File.open(Rails.root.join('CSVs/resources/users/logoInf.gif'))})
+	Conference.create({name:'Inforum 2013', begin:'21-09-2013 09:00', end:'24-09-2013 23:00', location:'Orlando,Florida', logo: File.open(Rails.root.join('CSVs/resources/logoInf.gif'))})
 	#Conference.create({name:'Inforum 2013', begin:'21-09-2013 09:00', end:'24-09-2013 23:00', location:'Orlando,Florida', logo: 'logoInf.gif'})
 
 user1 =

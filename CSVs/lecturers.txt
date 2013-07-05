@@ -37,6 +37,6 @@ João Manuel Brisson Lopes,Prof.,,,,,photo.jpg,random_mail30@rand.com
 Vasco Costa,Prof.,,,,,photo.jpg,random_mail31@rand.com
 Gustavo Maçães,Prof.,,,,,photo.jpg,random_mail32@rand.com
 Nuno Silva,Prof.,,,,,photo.jpg,random_mail33@rand.com
-Nuno Alves,Student,FCT/UNL,Portugal,nralves.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,nuno.png,nralves@campus.fct.unl.pt
-João Ribeiro,Student,FCT/UNL,Portugal,jribeiro.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,potter.jpg,jribeiro@gmail.com
-Filipe Correia,Student,FCT/UNLS,Portugal,fcorreia.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,filipe.jpg,filipe@campus.fct.unl.pt.com
+Nuno Alves,Student,FCT/UNL,Portugal,nralves.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,nuno.jpg,nralves@campus.fct.unl.pt
+João Ribeiro,Student,FCT/UNL,Portugal,jribeiro.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,potter.png,jribeiro@gmail.com
+Filipe Correia,Student,FCT/UNLS,Portugal,fcorreia.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,filipe.png,filipe@campus.fct.unl.pt.com
