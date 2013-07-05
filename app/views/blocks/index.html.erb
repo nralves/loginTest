@@ -10,7 +10,7 @@
     <th>Room</th>
     <th>Conference</th>
     <th>Track</th>
-    <th></th>
+    <th>Updated</th>
     <th></th>
   </tr>
 
@@ -22,6 +22,7 @@
     <td><%= block.room %></td>
     <td><%= block.conference.name %></td>
 	<td><%= block.track.name %></td>
+	<td><%= block.updated_at %></td>
     <td><%= link_to 'Show', block %></td>
     <td><%= link_to 'Edit', edit_block_path(block) %></td>
     <td><%= link_to 'Destroy', block, method: :delete, data: { confirm: 'Are you sure?' } %></td>

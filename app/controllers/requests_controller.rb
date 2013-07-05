@@ -43,9 +43,10 @@ class RequestsController < ApplicationController
   
     @request = Request.new(:requester_id=>current_user.id, :user_id=> params[:user_id])
 	request_test = Request.count(:all, :conditions => ["user_id = ? and requester_id=?",params[:user_id], current_user.id])
-
 	
-	if @request.user_id != @request.requester_id && request_test == 0
+	test_friendship = current_user.friendships.where("friend_id = \"#{params[:user_id]}\"").first
+	
+	if @request.user_id != @request.requester_id && request_test == 0 && test_friendship.nil?
 		respond_to do |format|
 		  if @request.save
 			format.html { redirect_to users_path, notice: 'Request was successfully created.' }

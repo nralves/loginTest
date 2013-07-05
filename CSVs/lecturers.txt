@@ -1,5 +1,5 @@
 ﻿name,title,organization,country,homepage,resume,photo,email
-Fausto Mourato,Prof.,FCT/UNL,Portugal,fausto.fct.unl.pt,,photo.jpg,fm@unl.pt
+Fausto Mourato,Prof.,FCT/UNL,Portugal,fausto.fct.unl.pt,,fausto.png,fm@unl.pt
 Fernando Birra,Assistant Professor,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,"Fernando Birra doutorou-se em 2007 com a sua tese 'Técnicas Eficientes de Simulação de Tecidos com Realismo Acrescido'. Actualmente é investigador de Multimodal Systems e professor na Faculdade de Ciências e Tecnologias da Universidade Nova de Lisboa.",profBirra.png,fb@unl.pt
 Manuel Próspero dos Santos,Prof.,FCT/UNL,Portugal,http://ctp.di.fct.unl.pt/~fpb/Pagina_Pessoal/About_Me.html,"Professor Doutorado em Computer Graphics Modelling e investigador em Computação Gráfica na FCT/UNL.",mps.jpg,mps@unl.pt
 José Luís Encarnação,Prof.,Universidade Técnica de Darmstadt,Portugal,jle.utd.com,"De 1987 a 2006 José Luís Encarnação foi o director fundador do instituto Fraunhofer de Computação Gráfica IGD em Darmstadt. Deade 1975, é professor titular de Ciência da Computação na universidade Técnica de Darmstadt e dirige o Interactive Graphics Research Group (GRIS). Desde Outubro de 2009, é Professor Emérito da Universidade Técnica de Darmstadt. Co-fundou a EUROGRAPHICS, estabeleceu a INI-GraphicsNet, promoveu activamente a criação de várias empresas, foi autor/co-autor de inúmeros livros e artigos e recebeu diversos prémios e distinções",jle.jpg,jle@gris.tu-darmstadt.de
@@ -37,6 +37,6 @@ João Manuel Brisson Lopes,Prof.,,,,,photo.jpg,random_mail30@rand.com
 Vasco Costa,Prof.,,,,,photo.jpg,random_mail31@rand.com
 Gustavo Maçães,Prof.,,,,,photo.jpg,random_mail32@rand.com
 Nuno Silva,Prof.,,,,,photo.jpg,random_mail33@rand.com
-Nuno Alves,Student,FCT/UNL,Portugal,nralves.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,nralves@campus.fct.unl.pt
-João Ribeiro,Student,FCT/UNL,Portugal,jribeiro.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,jribeiro@gmail.com
-Filipe Correia,Student,FCT/UNLS,Portugal,fcorreia.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,photo.jpg,filipe@campus.fct.unl.pt.com
+Nuno Alves,Student,FCT/UNL,Portugal,nralves.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,nuno.png,nralves@campus.fct.unl.pt
+João Ribeiro,Student,FCT/UNL,Portugal,jribeiro.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,potter.jpg,jribeiro@gmail.com
+Filipe Correia,Student,FCT/UNLS,Portugal,fcorreia.fct.unl.pt,Estudante com grande vontade de tirar boa nota a PI,filipe.jpg,filipe@campus.fct.unl.pt.com

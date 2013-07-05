@@ -53,6 +53,7 @@
 		 <br />
 		 <div class="box">
 		 <h2>Events Associated</h2>
+		 <br />
 		 <% eventsArray.uniq{|x| x.id}.each do |event| %>
 			<b><%= event.name %></b><br />
 			<table>
@@ -74,6 +75,7 @@
 		 <br />
 		 <div class="box">
 		 <h2>Posters Associated</h2>
+		 <br />
 		 <% postersArray.uniq{|x| x.id}.each do |poster| %>
 			<b><%= poster.name %></b><br />
 			<%= link_to "Edit Poster", :controller => :posters, :action=> :theposter, :id=> poster.id %>
