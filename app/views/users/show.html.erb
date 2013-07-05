@@ -48,7 +48,6 @@
   <% requester = User.find(request.requester_id)  %>
     <li><%= requester.name %> - <%= link_to "Accept", friendships_path(:friend_id => requester), :method => :post %>
 	 | <%= link_to "Reject", request, :method => :delete %></li><br />
-	 <%= request.id %>
   <% end %>
 </ul>
 

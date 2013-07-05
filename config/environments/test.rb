@@ -40,14 +40,4 @@ Nifty::Application.configure do
 
 # I do care if the mailer can't send
 config.action_mailer.raise_delivery_errors = true
-
-# Include your app's configuration here:
-config.action_mailer.smtp_settings = {
-:address => "smtp.live.com",
-:port => "465",
-:domain => "my_app_domain", #Example: blog.local
-:authentication => :plain,
-:user_name => "wolf.kf_87@hotmail.com",
-:password => "GDISSbenfica"
-}
 }

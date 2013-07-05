@@ -18,3 +18,16 @@ CaS: Collection Aware Segmentation,Raquel Costa
 CaS: Collection Aware Segmentation,Manuel J. Fonseca
 CaS: Collection Aware Segmentation,Alferedo Ferreira
 ERAS - An Ontology-Based Tool for Expeditios Reconstruction of Virtual Cultural Heritage Sites,António Coelho
+SketchTester: Analysis and Evaluation of Calligraphic Gesture Recognizers,Abílio Costa
+Interface Caligráfica de Escrita no Ar,Pedro Leitão
+Interaction with Large Displays in a Public Space Using the Kinect Sensor,Igor Duarte Cardoso
+Inserção Dinâmica de Objectos Virtuais no Contexto de Fotografias Tiradas por Utilizadores,Rui Nóbrega
+Exploração Interactiva dos Hábitos de Audição de Música,Ricardo Dias
+"AUV Planning,An application for AUV mission planning",António Coelho
+Realidade Virtual Aplicada ao Tratamento de Ansiedade Social,Tânia Pinheiro
+Ray Tracing of Large Models on a Multi-Projection Display,Vasco Costa
+"COGNITO - Captura, Reconhecimento e Visualização de Actividades Manuais Complexas",Gustavo Maçães
+Visualização em Tempo Real de um Modo Esparso de Mistura Paramétrica para síntese da BTF,Nuno Silva
+Ruby on Rails server,Nuno Alves
+Android Logic,João Ribeiro
+Android Graphics,Filipe Correia

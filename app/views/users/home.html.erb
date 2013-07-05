@@ -18,7 +18,7 @@
 	
 	 <div class="box">
      Welcome <%= current_user.title %> <%= current_user.name %>. <%= link_to "Log out", logout_path %><br /><br />
-	 <%= image_tag current_user.photo_url(:thumb).to_s %>
+	 <%= image_tag current_user.photo_url(:thumb).to_s, :id => "imageP" %>
 	 <br />
      <%= link_to "Edit profile", edit_current_user_path %>
 	 <br />
@@ -42,7 +42,7 @@
 			 <h2>Lecturers Associated</h2>
 			 <% lecturers.each do |lecturer| %>
 				<ul>
-				<li><%= lecturer.name %></li>
+				<li><%= link_to lecturer.name, :controller => :lecturers, :action=> :thelecturer, :id=> lecturer.id %></li>
 				</ul>
 				<% eventsArray = eventsArray + lecturer.events %>
 				<% postersArray = postersArray + lecturer.posters %>
@@ -93,10 +93,29 @@
 		 </div>
 		 <br />
 		 <br />
+		 
+		 <div class="box">
+		 <h2>Contacts</h2>
+			<ul>
+				<% for user in current_user.inverse_friends %>
+				<li><%=h user.name %></li>
+				<% end %>
+			</ul>
+			<br />
+			<h1>Requests from</h1>
+			<ul>
+				<% current_user.requests.each do |request| %>
+				<% requester = User.find(request.requester_id)  %>
+				<li><%= requester.name %> - <%= link_to "Accept", friendships_path(:friend_id => requester), :method => :post %>
+				| <%= link_to "Reject", request, :method => :delete %></li><br />
+				<% end %>
+			</ul>
+		 </div>
+		 <br />
+		 <br />
 	   <% else %>
 		 <%= link_to "Sign up", signup_path %> or
 		 <%= link_to "log in", login_path %>.
 	   <% end %>
-	   
 	  </div>
   </div>

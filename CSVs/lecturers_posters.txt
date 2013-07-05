@@ -9,3 +9,8 @@ João Ferreira Nunes,Human Motion Analysis Tools
 Pedro Miguel Moreira,Human Motion Analysis Tools
 João Manuel R. S. Tavares,Human Motion Analysis Tools
 Waldir Pimenta,An Intuitive Navigation System: Augmented Reality on the Car Windshield
+Ricardo Baptista,Extracçao de Informação de Texto Formal para a Modelação Expedita de Edificios Monumentais
+João Manuel Brisson Lopes,Outdoor Sports Performance Analysis Enchancement and Multimedia Documentation
+Nuno Alves,Conference Buddy
+João Ribeiro,Conference Buddy
+Filipe Correia,Conference Buddy

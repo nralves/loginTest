@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<div id="content">
+<div id="main">
+<div class="box">
+
+<h1>Lecturer</h1>
+<br />
+<p>
+  <b>Title:</b>
+  <%= @lecturer.title %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @lecturer.name %>
+</p>
+
+<p>
+  <b>Photo:</b><br />
+  <%= image_tag @lecturer.image_url(:thumb).to_s, :id => "imageP" %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @lecturer.organization %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @lecturer.country %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%= @lecturer.homepage %>
+</p>
+
+<p>
+  <b>Resume:</b>
+  <%= @lecturer.resume %>
+</p>
+</div>
+</div>
+</div>
+
+<%= link_to "Edit", :controller => :lecturers, :action=> :editthelecturer, :id=> @lecturer.id %> | 
+<%= link_to 'Back', root_url %>

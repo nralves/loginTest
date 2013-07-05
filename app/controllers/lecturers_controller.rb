@@ -20,6 +20,15 @@ class LecturersController < ApplicationController
       format.json { render json: @lecturer }
     end
   end
+  
+  def thelecturer
+    @lecturer = Lecturer.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @lecturer }
+    end
+  end
 
   # GET /lecturers/new
   # GET /lecturers/new.json
@@ -34,6 +43,10 @@ class LecturersController < ApplicationController
 
   # GET /lecturers/1/edit
   def edit
+    @lecturer = Lecturer.find(params[:id])
+  end
+  
+   def editthelecturer
     @lecturer = Lecturer.find(params[:id])
   end
 
@@ -73,6 +86,20 @@ class LecturersController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
+        format.json { render json: @lecturer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  
+    def updatethelecturer
+    @lecturer = Lecturer.find(params[:id])
+
+    respond_to do |format|
+      if @lecturer.update_attributes(params[:lecturer])
+        format.html { render action: "thelecturer", :id=> @lecturer.id, notice: 'Poster was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { head :bad_request }
         format.json { render json: @lecturer.errors, status: :unprocessable_entity }
       end
     end

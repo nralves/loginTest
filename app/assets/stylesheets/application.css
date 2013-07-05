@@ -128,7 +128,7 @@ p {
 	padding: 0px;
 }
 
-h2 {
+h1,h2 {
 	color: #73353A;
 	margin:0px;
 	padding:0px;
@@ -155,9 +155,6 @@ blockquote{
 	color: #606060;
 	padding: 10px;
 }
-
-
-
 
 /**** Main Container ***/
 #wrap {
@@ -292,7 +289,10 @@ a.fill-div {
 #main .box a {
 	margin: 10px 0 10px 0;
 	color: #56677C;
-	font-size: 10px;
+}
+
+#main .box a:hover {
+	font-weight: bold;
 }
 
 #main .box p {
@@ -307,6 +307,10 @@ a.fill-div {
 
 #main .box li {
 	margin-top:5px;
+}
+
+#imageP{
+	border: 5px solid #000;
 }
 
 

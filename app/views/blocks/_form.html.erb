@@ -28,7 +28,7 @@
     <%= f.text_field :room %>
   </div>
   
-  <h3>Block name</h3>
+  <h3>Conference name</h3>
    <%= collection_select(:block, :conference_id, @conferences, :id, :name_and_date, {:prompt => false })  %>
    <br />
    <h3>Track</h3>

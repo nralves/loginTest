@@ -3,5 +3,7 @@ Utilização de Objectos Reais em Aplicações de Realidade Aumentada para Dispo
 Realidade Aumentada para Caça ao Tesouro em Larga Escala,,poster.png,realidade aumentada.pdf,Jogos e Entretenimento
 Human Motion Analysis Tools,,poster.png,humanMotion.pdf,Jogos e Entretenimento
 An Intuitive Navigation System: Augmented Reality on the Car Windshield,,poster.png,an intuitive.pdf,Jogos e Entretenimento
-Extração de informação de Texto Formal para a Modelação Expedita de Edificios Monumentais,,poster.png,extracaoinfo.pdf,Jogos e Entretenimento
 Outdoor Sports Performance Analysis Enchncement and Multimedia Documentation,,poster.png,outdoors sports.pdf,Jogos e Entretenimento
+Extracçao de Informação de Texto Formal para a Modelação Expedita de Edificios Monumentais,,poster.png,extracaoinfo.pdf,Aplicações
+Outdoor Sports Performance Analysis Enchancement and Multimedia Documentation,,poster.png,outdoors sports.pdf,Síntese e Visualização
+Conference Buddy,O nosso poster apresentado no grande evento da FCT,G05_poster.pdf,posterG05_resume.pdf,Projecto Integrador

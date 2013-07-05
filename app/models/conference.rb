@@ -167,7 +167,11 @@ class Conference < ActiveRecord::Base
 			e.name = row[0]
 			e.abstract = row[1]
 			e.block_id = b_hash[row[2]]
-			e.file = File.open("CSVs/resources/events/" + row[3])
+			if !row[3].nil?
+				if File.exist?("CSVs/resources/events/" + row[3])
+					e.file = File.open("CSVs/resources/events/" + row[3])
+				end
+			end
 			e.save
 			e_hash[e.name] = e.id
 		end
